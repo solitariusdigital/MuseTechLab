@@ -106,7 +106,7 @@ export default function Canvas() {
           })}
         </Layer>
       </Stage>
-      <p>رنگ کلیک کن یا تکان بده</p>
+      <p>رنگ کلیک کن یا حرکت بده</p>
     </div>
   );
 }

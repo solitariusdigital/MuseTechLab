@@ -13,9 +13,14 @@
   width: 100%;
 }
 
+.english {
+  font-family: config.$font-english !important;
+}
+
 .header {
   color: config.$white;
-  margin-bottom: 20px;
+  margin-top: 100px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -24,7 +29,7 @@
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   gap: 12px;
   margin: auto;
-  margin: 100px 0px;
+  margin-bottom: 100px;
   direction: rtl;
   width: config.$content-width;
 
@@ -176,14 +181,17 @@
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   height: 100px;
   color: config.$white;
+  width: config.$content-width;
 
   @include mixins.mobile {
     flex-direction: column;
     height: 150px;
+    width: calc(100% - 24px);
+    margin-bottom: 50px;
   }
 
   .row {
@@ -194,10 +202,6 @@
       &:hover {
         cursor: pointer;
       }
-    }
-    @include mixins.mobile {
-      width: 100%;
-      padding: 0px 12px;
     }
 
     p {

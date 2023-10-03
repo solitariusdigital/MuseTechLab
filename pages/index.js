@@ -51,29 +51,32 @@ export default function Home() {
       <div className={classes.menu}>
         <Menu />
       </div>
-      <div className={classes.header}>
-        <h2>
-          Minimal <span style={{ color: colorOne }}>Tech Lab</span>
-        </h2>
-        <h2>
-          لابراتوار فناوری <span style={{ color: colorTwo }}>مینیمال</span>
-        </h2>
-      </div>
       <div className={classes.canvasContainer}>
         <div className={classes.canvas}>
           <Canvas />
         </div>
       </div>
+      <div className={classes.header}>
+        <h2 className={classes.english}>
+          Minimal{" "}
+          <span style={{ color: colorOne }} className={classes.english}>
+            Tech Lab
+          </span>
+        </h2>
+        <h2>
+          لابراتوار فناوری <span style={{ color: colorTwo }}>مینیمال</span>
+        </h2>
+      </div>
       <div className={classes.bannerContainer}>
         <div className={classes.banner}>
           <ScienceIcon sx={{ fontSize: 45, color: "#F06060" }} />
           <h2>طراحی تجربه کاربری</h2>
-          <h2>User Experience</h2>
+          <h2 className={classes.english}>User Experience</h2>
         </div>
         <div className={classes.banner}>
           <BrushIcon sx={{ fontSize: 45, color: "#5DADE2" }} />
           <h2>نمونه سازی رابط کاربری</h2>
-          <h2>User Interface</h2>
+          <h2 className={classes.english}>User Interface</h2>
         </div>
         <div className={classes.banner}>
           <PrecisionManufacturingIcon sx={{ fontSize: 45, color: "#AF7AC5" }} />
@@ -100,7 +103,8 @@ export default function Home() {
         <h3>
           هدف از توسعه نرم افزار انتقال ایده ها و طرح ها به راه حل های عملی و حل
           مشکلات است. مهارت های برنامه نویسی ما این فرصت را برای شما فراهم می
-          کند تا طرح های ساده و در عین حال نوآورانه، خلاق تر و سازنده تر باشند
+          کند تا طرح های مینیمال و در عین حال نوآورانه، خلاق تر و سازنده تر
+          باشند
         </h3>
       </div>
       <div className={classes.spinner}></div>
@@ -181,26 +185,32 @@ export default function Home() {
         <div className={classes.item}>
           <div className={classes.row}>
             <Image width={40} height={40} src={ga} alt="lab" priority />
-            <h3>General Assembly Melbourne Australia</h3>
+            <h3 className={classes.english}>
+              General Assembly Melbourne Australia
+            </h3>
           </div>
           <p>مهندس نرم افزار همه جانبه</p>
-          <p>2019</p>
+          <p className={classes.english}>2019</p>
         </div>
         <div className={classes.item}>
           <div className={classes.row}>
             <Image width={40} height={40} src={newcastle} alt="lab" priority />
-            <h3>The University of Newcastle Australia</h3>
+            <h3 className={classes.english}>
+              The University of Newcastle Australia
+            </h3>
           </div>
           <p>ارشد معماری</p>
-          <p>2011</p>
+          <p className={classes.english}>2011</p>
         </div>
         <div className={classes.item}>
           <div className={classes.row}>
             <Image width={40} height={40} src={deakin} alt="lab" priority />
-            <h3>Deakin University Australia</h3>
+            <h3 className={classes.english}>
+              Deakin University Melbourne Australia
+            </h3>
           </div>
           <p>کارشناس طراحی</p>
-          <p>2009</p>
+          <p className={classes.english}>2009</p>
         </div>
       </div>
       <div className={classes.button}>
@@ -216,7 +226,7 @@ export default function Home() {
         </button>
       </div>
       <div className={classes.description}>
-        <h3>توجه به جزییات و ساختن پلتفورم مینیمال، مدرن و سریع </h3>
+        <h3>توجه به جزییات و توسعه پلتفورم مینیمال، مدرن و سریع </h3>
         <h3>مطابق با استانداردهای جهانی تنها شروع کار است</h3>
       </div>
       <div
@@ -258,11 +268,11 @@ export default function Home() {
           onClick={() => window.open("tel:09121089341", "_self")}
         >
           <PhoneIphoneOutlinedIcon />
-          <p>0912 108 9341</p>
+          <p className={classes.english}>0912 108 9341</p>
         </div>
         <div className={classes.row}>
           <AlternateEmailIcon />
-          <p>pouyan.mad@gmail.com</p>
+          <p className={classes.english}>pouyan.mad@gmail.com</p>
         </div>
         <div
           className={classes.row}
@@ -274,7 +284,7 @@ export default function Home() {
           }
         >
           <LinkedInIcon />
-          <p>LinkedIn</p>
+          <p className={classes.english}>LinkedIn</p>
         </div>
       </div>
     </div>
