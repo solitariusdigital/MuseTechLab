@@ -1,0 +1,17 @@
+@use "styles/_config.scss" as config;
+@use "styles/_mixins.scss" as mixins;
+
+.container {
+  height: 100px;
+  width: config.$content-width;
+  @include mixins.row-space-between-center();
+
+  @include mixins.mobile {
+    width: calc(100% - 24px);
+  }
+}
+
+.largeMenu {
+  width: 100%;
+  @include mixins.row-space-between-center();
+}
