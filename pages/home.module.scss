@@ -118,11 +118,30 @@
   }
 }
 
+.spinner {
+  width: 3em;
+  height: 3em;
+  cursor: none;
+  margin-top: 100px;
+  border-radius: 50%;
+  box-shadow: -10px -10px 10px #af7ac5, 0px -10px 10px 0px #e74c3c,
+    10px -10px 10px #5dade2, 10px 0 10px #f06060, 10px 10px 10px 0px#8CBEB2,
+    0 10px 10px 0px #f39c12, -10px 10px 10px 0px #52be80;
+  animation: rot55 0.7s linear infinite;
+}
+
+@keyframes rot55 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .education {
   color: config.$white;
   border: 1px solid config.$white;
   box-shadow: config.$card-shadow;
   text-align: right;
+  width: 600px;
   padding: 12px;
   @include mixins.border-radius();
 

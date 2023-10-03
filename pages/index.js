@@ -53,12 +53,10 @@ export default function Home() {
       </div>
       <div className={classes.header}>
         <h2>
-          Minimal Advanced Design{" "}
-          <span style={{ color: colorOne }}>Tech Lab</span>
+          Minimal <span style={{ color: colorOne }}>Tech Lab</span>
         </h2>
         <h2>
-          لابراتوار فناوری{" "}
-          <span style={{ color: colorTwo }}>طراحی پیشرفته مینیمال</span>{" "}
+          لابراتوار فناوری <span style={{ color: colorTwo }}>مینیمال</span>
         </h2>
       </div>
       <div className={classes.canvasContainer}>
@@ -68,21 +66,21 @@ export default function Home() {
       </div>
       <div className={classes.bannerContainer}>
         <div className={classes.banner}>
-          <ScienceIcon sx={{ fontSize: 45 }} />
+          <ScienceIcon sx={{ fontSize: 45, color: "#F06060" }} />
           <h2>طراحی تجربه کاربری</h2>
           <h2>User Experience</h2>
         </div>
         <div className={classes.banner}>
-          <BrushIcon sx={{ fontSize: 45 }} />
+          <BrushIcon sx={{ fontSize: 45, color: "#5DADE2" }} />
           <h2>نمونه سازی رابط کاربری</h2>
           <h2>User Interface</h2>
         </div>
         <div className={classes.banner}>
-          <PrecisionManufacturingIcon sx={{ fontSize: 45 }} />
+          <PrecisionManufacturingIcon sx={{ fontSize: 45, color: "#AF7AC5" }} />
           <h2>توسعه نرم افزار، وب اپلیکیشن، وب سایت</h2>
         </div>
         <div className={classes.banner}>
-          <ScatterPlotIcon sx={{ fontSize: 45 }} />
+          <ScatterPlotIcon sx={{ fontSize: 45, color: "#F39C12" }} />
           <h2>مدل سازی ساختار داده، پشتیبانی و ارتقا کارایی</h2>
         </div>
       </div>
@@ -105,6 +103,7 @@ export default function Home() {
           کند تا طرح های ساده و در عین حال نوآورانه، خلاق تر و سازنده تر باشند
         </h3>
       </div>
+      <div className={classes.spinner}></div>
       <div className={classes.imageHero}>
         <Image
           className={classes.image}
@@ -116,50 +115,74 @@ export default function Home() {
         />
       </div>
       <div className={classes.education}>
+        <h2>فرایند توسعه نرم‌‌افزار</h2>
+        <div className={classes.item}>
+          <div className={classes.row}>
+            <ScienceIcon sx={{ color: "#F06060" }} />
+            <h3>شناسایی نیازها</h3>
+          </div>
+          <p>مهندس نرم افزار همه جانبه</p>
+        </div>
+        <div className={classes.item}>
+          <div className={classes.row}>
+            <ScienceIcon sx={{ color: "#F06060" }} />
+            <h3>تحلیل نیازها</h3>
+          </div>
+          <p>مهندس نرم افزار همه جانبه</p>
+        </div>
+        <div className={classes.item}>
+          <div className={classes.row}>
+            <BrushIcon sx={{ color: "#5DADE2" }} />
+            <h3>توسعه طراحی</h3>
+          </div>
+          <p>مهندس نرم افزار همه جانبه</p>
+        </div>
+        <div className={classes.item}>
+          <div className={classes.row}>
+            <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+            <h3>توسعه و پیاده‌سازی</h3>
+          </div>
+          <p>مهندس نرم افزار همه جانبه</p>
+        </div>
+        <div className={classes.item}>
+          <div className={classes.row}>
+            <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+            <h3>آزمایش</h3>
+          </div>
+          <p>مهندس نرم افزار همه جانبه</p>
+        </div>
+        <div className={classes.item}>
+          <div className={classes.row}>
+            <ScatterPlotIcon sx={{ color: "#F39C12" }} />
+            <h3>استقرار نرم‌افزار و پشتیبانی</h3>
+          </div>
+          <p>مهندس نرم افزار همه جانبه</p>
+        </div>
+      </div>
+      <div className={classes.education}>
         <h2>تحصیلات</h2>
         <div className={classes.item}>
           <div className={classes.row}>
-            <Image
-              className={classes.image}
-              width={40}
-              height={40}
-              src={ga}
-              alt="lab"
-              priority
-            />
+            <Image width={40} height={40} src={ga} alt="lab" priority />
             <h3>General Assembly Melbourne Australia</h3>
           </div>
-          <p>مهندسی نرم افزار همه جانبه</p>
+          <p>مهندس نرم افزار همه جانبه</p>
           <p>2019</p>
         </div>
         <div className={classes.item}>
           <div className={classes.row}>
-            <Image
-              className={classes.image}
-              width={40}
-              height={40}
-              src={newcastle}
-              alt="lab"
-              priority
-            />
+            <Image width={40} height={40} src={newcastle} alt="lab" priority />
             <h3>The University of Newcastle Australia</h3>
           </div>
-          <p>فوق لیسانس معماری</p>
+          <p>ارشد معماری</p>
           <p>2011</p>
         </div>
         <div className={classes.item}>
           <div className={classes.row}>
-            <Image
-              className={classes.image}
-              width={40}
-              height={40}
-              src={deakin}
-              alt="lab"
-              priority
-            />
+            <Image width={40} height={40} src={deakin} alt="lab" priority />
             <h3>Deakin University Australia</h3>
           </div>
-          <p>لیسانس طراحی</p>
+          <p>کارشناس طراحی</p>
           <p>2009</p>
         </div>
       </div>
@@ -174,6 +197,10 @@ export default function Home() {
         >
           درخواست مشاوره
         </button>
+      </div>
+      <div className={classes.description}>
+        <h3>توجه به جزییات و ساختن پلتفورم مینیمال، مدرن و سریع </h3>
+        <h3>مطابق با استانداردهای جهانی تنها شروع کار است</h3>
       </div>
       <div
         className={classes.imageBottom}
