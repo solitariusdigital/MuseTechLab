@@ -151,15 +151,31 @@
   margin-bottom: 100px;
   @include mixins.border-radius();
 
+  .rowTitle,
   .row {
     display: flex;
     direction: rtl;
     align-items: center;
     margin-bottom: 8px;
 
+    h2 {
+      margin-left: 50px;
+    }
+
     h3 {
       margin-right: 20px;
       font-weight: bold;
+    }
+  }
+
+  .rowTitle {
+    justify-content: space-between;
+
+    @include mixins.desktop {
+      &:hover {
+        cursor: pointer;
+        color: config.$action;
+      }
     }
   }
 

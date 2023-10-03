@@ -16,6 +16,8 @@ import ScatterPlotIcon from "@mui/icons-material/ScatterPlot";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import logo from "@/assets/lab.png";
 import MinimalTechLab from "@/assets/MinimalTechLab.svg";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 const Canvas = dynamic(() => import("../components/Canvas"), {
   ssr: false,
@@ -24,6 +26,9 @@ const Canvas = dynamic(() => import("../components/Canvas"), {
 export default function Home() {
   const [colorOne, setColorOne] = useState("#AF7AC5");
   const [colorTwo, setColorTwo] = useState("#F39C12");
+
+  const [expandProcess, setExpandProcess] = useState(false);
+  const [expandEducation, setExpandEducation] = useState(false);
 
   const colors = [
     "#AF7AC5",
@@ -119,99 +124,125 @@ export default function Home() {
         />
       </div>
       <div className={classes.infomration}>
-        <h2>فرایند توسعه نرم‌‌افزار</h2>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <ScienceIcon sx={{ color: "#F06060" }} />
-            <h3>تحلیل نیازها</h3>
-          </div>
-          <p>
-            برای توسعه نرم‌افزار طوفان فکری درمورد فرایند صورت می‌گیرد. کارکردها
-            و خدمات نرم‌افزار شناسایی میشود تا راه حل هایی ضروری و مفید برای
-            مخاطب و مشتریان شناسایی شود. برای دستیابی به محصول باکیفیت، جزییات
-            هر بخش از کار، طرح نهایی و پارامترها بررسی میشود
-          </p>
+        <div
+          className={classes.rowTitle}
+          onClick={() => setExpandProcess(!expandProcess)}
+        >
+          <h2>فرایند توسعه نرم‌‌افزار</h2>
+          {expandProcess ? <ExpandLessIcon /> : <ExpandMoreIcon />}
         </div>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <BrushIcon sx={{ color: "#5DADE2" }} />
-            <h3>توسعه طراحی</h3>
+        {expandProcess && (
+          <div className="animate__animated animate__zoomIn">
+            <div className={classes.item}>
+              <div className={classes.row}>
+                <ScienceIcon sx={{ color: "#F06060" }} />
+                <h3>تحلیل نیازها</h3>
+              </div>
+              <p>
+                برای توسعه نرم‌افزار طوفان فکری درمورد فرایند صورت می‌گیرد.
+                کارکردها و خدمات نرم‌افزار شناسایی میشود تا راه حل هایی ضروری و
+                مفید برای مخاطب و مشتریان شناسایی شود. برای دستیابی به محصول
+                باکیفیت، جزییات هر بخش از کار، طرح نهایی و پارامترها بررسی میشود
+              </p>
+            </div>
+            <div className={classes.item}>
+              <div className={classes.row}>
+                <BrushIcon sx={{ color: "#5DADE2" }} />
+                <h3>توسعه طراحی</h3>
+              </div>
+              <p>
+                مشخصه‌های فنی تخصصی مورد نیاز برای خلق نرم‌افزار ترسیم میشود.
+                عواملی مانند فناوری‌های قابل‌ استفاده، زمان، بودجه، محدودیت‌های
+                پروژه، روش و طراحی معماری شناسایی میشود. معماری طراحی، اجزا،
+                ارتباطات، فرانت اند و جریان کاربر مشخص میشود
+              </p>
+            </div>
+            <div className={classes.item}>
+              <div className={classes.row}>
+                <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                <h3>توسعه و پیاده‌سازی</h3>
+              </div>
+              <p>
+                براساس مشخصه‌های محصول و نیازمندی‌هایی که در مراحل قبل کدنویسی
+                میشود. فرانت اند و بک اند توسعه داده میشود و کدها بازبینی و
+                آزمایش میشوند. سپس محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی
+                محصول با نیازها مورد آزمایش قرار میگیرد
+              </p>
+            </div>
+            <div className={classes.item}>
+              <div className={classes.row}>
+                <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                <h3>آزمایش</h3>
+              </div>
+              <p>
+                در مرحله‌ آزمایش محصول از لحاظ داشتن باگ آزموده می‌شود و عملکرد
+                آن پیش از تحویل به کاربر بازبینی میشود تا زمانی که نرم‌افزار
+                بدون وجود باگ کار کند و مطابق با نیازها باشد
+              </p>
+            </div>
+            <div className={classes.item}>
+              <div className={classes.row}>
+                <ScatterPlotIcon sx={{ color: "#F39C12" }} />
+                <h3>استقرار نرم‌افزار و پشتیبانی</h3>
+              </div>
+              <p>
+                هنگامی که نرم‌افزار هیچ نقصی نداشته باشد به مشتری ارائه داده
+                میشود. پس از ارائه‌ نسخه‌ تولیدی نرم‌افزار، مشکلات کاربر هنگام
+                کار با محصول مدیریت میشود. درصورتی‌ که نرم‌افزار با مشکل روبه‌رو
+                شود آپدیت انجام میگیرد
+              </p>
+            </div>
           </div>
-          <p>
-            مشخصه‌های فنی تخصصی مورد نیاز برای خلق نرم‌افزار ترسیم میشود. عواملی
-            مانند فناوری‌های قابل‌ استفاده، زمان، بودجه، محدودیت‌های پروژه، روش
-            و طراحی معماری شناسایی میشود. معماری طراحی، اجزا، ارتباطات، فرانت
-            اند و جریان کاربر مشخص میشود
-          </p>
-        </div>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-            <h3>توسعه و پیاده‌سازی</h3>
-          </div>
-          <p>
-            براساس مشخصه‌های محصول و نیازمندی‌هایی که در مراحل قبل کدنویسی
-            میشود. فرانت اند و بک اند توسعه داده میشود و کدها بازبینی و آزمایش
-            میشوند. سپس محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی محصول با
-            نیازها مورد آزمایش قرار میگیرد
-          </p>
-        </div>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-            <h3>آزمایش</h3>
-          </div>
-          <p>
-            در مرحله‌ آزمایش محصول از لحاظ داشتن باگ آزموده می‌شود و عملکرد آن
-            پیش از تحویل به کاربر بازبینی میشود تا زمانی که نرم‌افزار بدون وجود
-            باگ کار کند و مطابق با نیازها باشد
-          </p>
-        </div>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <ScatterPlotIcon sx={{ color: "#F39C12" }} />
-            <h3>استقرار نرم‌افزار و پشتیبانی</h3>
-          </div>
-          <p>
-            هنگامی که نرم‌افزار هیچ نقصی نداشته باشد به مشتری ارائه داده میشود.
-            پس از ارائه‌ نسخه‌ تولیدی نرم‌افزار، مشکلات کاربر هنگام کار با محصول
-            مدیریت میشود. درصورتی‌ که نرم‌افزار با مشکل روبه‌رو شود آپدیت انجام
-            میگیرد
-          </p>
-        </div>
+        )}
       </div>
       <div className={classes.infomration}>
-        <h2>تحصیلات</h2>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <Image width={40} height={40} src={ga} alt="lab" priority />
-            <h3 className={classes.english}>
-              General Assembly Melbourne Australia
-            </h3>
-          </div>
-          <p>مهندس نرم افزار همه جانبه</p>
-          <p className={classes.english}>2019</p>
+        <div
+          className={classes.rowTitle}
+          onClick={() => setExpandEducation(!expandEducation)}
+        >
+          <h2>تحصیلات</h2>
+          {expandEducation ? <ExpandLessIcon /> : <ExpandMoreIcon />}
         </div>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <Image width={40} height={40} src={newcastle} alt="lab" priority />
-            <h3 className={classes.english}>
-              The University of Newcastle Australia
-            </h3>
+        {expandEducation && (
+          <div className="animate__animated animate__zoomIn">
+            <div className={classes.item}>
+              <div className={classes.row}>
+                <Image width={40} height={40} src={ga} alt="lab" priority />
+                <h3 className={classes.english}>
+                  General Assembly Melbourne Australia
+                </h3>
+              </div>
+              <p>مهندس نرم افزار همه جانبه</p>
+              <p className={classes.english}>2019</p>
+            </div>
+            <div className={classes.item}>
+              <div className={classes.row}>
+                <Image
+                  width={40}
+                  height={40}
+                  src={newcastle}
+                  alt="lab"
+                  priority
+                />
+                <h3 className={classes.english}>
+                  The University of Newcastle Australia
+                </h3>
+              </div>
+              <p>ارشد معماری</p>
+              <p className={classes.english}>2011</p>
+            </div>
+            <div className={classes.item}>
+              <div className={classes.row}>
+                <Image width={40} height={40} src={deakin} alt="lab" priority />
+                <h3 className={classes.english}>
+                  Deakin University Melbourne Australia
+                </h3>
+              </div>
+              <p>کارشناس طراحی</p>
+              <p className={classes.english}>2009</p>
+            </div>
           </div>
-          <p>ارشد معماری</p>
-          <p className={classes.english}>2011</p>
-        </div>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <Image width={40} height={40} src={deakin} alt="lab" priority />
-            <h3 className={classes.english}>
-              Deakin University Melbourne Australia
-            </h3>
-          </div>
-          <p>کارشناس طراحی</p>
-          <p className={classes.english}>2009</p>
-        </div>
+        )}
       </div>
       <div className={classes.button}>
         <button
