@@ -114,52 +114,69 @@ export default function Home() {
           priority
         />
       </div>
-      <div className={classes.education}>
+      <div className={classes.infomration}>
         <h2>فرایند توسعه نرم‌‌افزار</h2>
-        <div className={classes.item}>
-          <div className={classes.row}>
-            <ScienceIcon sx={{ color: "#F06060" }} />
-            <h3>شناسایی نیازها</h3>
-          </div>
-          <p>مهندس نرم افزار همه جانبه</p>
-        </div>
         <div className={classes.item}>
           <div className={classes.row}>
             <ScienceIcon sx={{ color: "#F06060" }} />
             <h3>تحلیل نیازها</h3>
           </div>
-          <p>مهندس نرم افزار همه جانبه</p>
+          <p>
+            برای توسعه نرم‌افزار طوفان فکری درمورد فرایند صورت می‌گیرد. کارکردها
+            و خدمات نرم‌افزار شناسایی میشود تا راه حل هایی ضروری و مفید برای
+            مخاطب و مشتریان شناسایی شود. برای دستیابی به محصول باکیفیت، جزییات
+            هر بخش از کار، طرح نهایی و پارامترها بررسی میشود
+          </p>
         </div>
         <div className={classes.item}>
           <div className={classes.row}>
             <BrushIcon sx={{ color: "#5DADE2" }} />
             <h3>توسعه طراحی</h3>
           </div>
-          <p>مهندس نرم افزار همه جانبه</p>
+          <p>
+            مشخصه‌های فنی تخصصی مورد نیاز برای خلق نرم‌افزار ترسیم میشود. عواملی
+            مانند فناوری‌های قابل‌ استفاده، زمان، بودجه، محدودیت‌های پروژه، روش
+            و طراحی معماری شناسایی میشود. معماری طراحی، اجزا، ارتباطات، فرانت
+            اند و جریان کاربر مشخص میشود
+          </p>
         </div>
         <div className={classes.item}>
           <div className={classes.row}>
             <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
             <h3>توسعه و پیاده‌سازی</h3>
           </div>
-          <p>مهندس نرم افزار همه جانبه</p>
+          <p>
+            براساس مشخصه‌های محصول و نیازمندی‌هایی که در مراحل قبل کدنویسی
+            میشود. فرانت اند و بک اند توسعه داده میشود و کدها بازبینی و آزمایش
+            میشوند. سپس محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی محصول با
+            نیازها مورد آزمایش قرار میگیرد
+          </p>
         </div>
         <div className={classes.item}>
           <div className={classes.row}>
             <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
             <h3>آزمایش</h3>
           </div>
-          <p>مهندس نرم افزار همه جانبه</p>
+          <p>
+            در مرحله‌ آزمایش محصول از لحاظ داشتن باگ آزموده می‌شود و عملکرد آن
+            پیش از تحویل به کاربر بازبینی میشود تا زمانی که نرم‌افزار بدون وجود
+            باگ کار کند و مطابق با نیازها باشد
+          </p>
         </div>
         <div className={classes.item}>
           <div className={classes.row}>
             <ScatterPlotIcon sx={{ color: "#F39C12" }} />
             <h3>استقرار نرم‌افزار و پشتیبانی</h3>
           </div>
-          <p>مهندس نرم افزار همه جانبه</p>
+          <p>
+            هنگامی که نرم‌افزار هیچ نقصی نداشته باشد به مشتری ارائه داده میشود.
+            پس از ارائه‌ نسخه‌ تولیدی نرم‌افزار، مشکلات کاربر هنگام کار با محصول
+            مدیریت میشود. درصورتی‌ که نرم‌افزار با مشکل روبه‌رو شود آپدیت انجام
+            میگیرد
+          </p>
         </div>
       </div>
-      <div className={classes.education}>
+      <div className={classes.infomration}>
         <h2>تحصیلات</h2>
         <div className={classes.item}>
           <div className={classes.row}>

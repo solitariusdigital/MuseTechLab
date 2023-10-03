@@ -24,7 +24,7 @@
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   gap: 12px;
   margin: auto;
-  margin-top: 100px;
+  margin: 100px 0px;
   direction: rtl;
   width: config.$content-width;
 
@@ -136,13 +136,14 @@
   }
 }
 
-.education {
+.infomration {
   color: config.$white;
   border: 1px solid config.$white;
   box-shadow: config.$card-shadow;
   text-align: right;
   width: 600px;
   padding: 12px;
+  margin-bottom: 100px;
   @include mixins.border-radius();
 
   .row {
@@ -167,7 +168,6 @@
 }
 
 .button {
-  margin-top: 100px;
   button {
     @include mixins.heartbeat();
   }
