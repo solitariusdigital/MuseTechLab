@@ -2,7 +2,12 @@ import { useState, createContext } from "react";
 export const StateContext = createContext();
 
 export const StateProvider = (props) => {
-  const stateContext = {};
+  const [language, setLanguage] = useState(false);
+
+  const stateContext = {
+    language,
+    setLanguage,
+  };
   return (
     <StateContext.Provider value={stateContext}>
       {props.children}

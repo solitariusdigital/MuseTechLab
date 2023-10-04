@@ -52,13 +52,13 @@
     align-items: center;
     text-align: center;
     height: 200px;
-    padding: 20px;
+    padding: 12px;
     color: config.$white;
     border: 1px solid config.$white;
     box-shadow: config.$card-shadow;
     @include mixins.border-radius();
 
-    h2 {
+    h3 {
       margin-top: 12px;
     }
   }
@@ -145,26 +145,33 @@
   color: config.$white;
   border: 1px solid config.$white;
   box-shadow: config.$card-shadow;
-  text-align: right;
   width: 600px;
   padding: 12px;
   margin-bottom: 100px;
+  text-align: justify;
   @include mixins.border-radius();
 
   .rowTitle,
   .row {
     display: flex;
     direction: rtl;
-    align-items: center;
-    margin-bottom: 8px;
+  }
 
-    h2 {
-      margin-left: 50px;
-    }
+  .row {
+    margin-bottom: 8px;
 
     h3 {
       margin-right: 20px;
-      font-weight: bold;
+    }
+  }
+
+  .rowEnglish {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+
+    h3 {
+      margin-left: 20px;
     }
   }
 

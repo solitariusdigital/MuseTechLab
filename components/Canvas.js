@@ -1,9 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { StateContext } from "@/context/stateContext";
 import { Stage, Layer, Circle } from "react-konva";
 import classes from "./Canvas.module.scss";
 import Konva from "konva";
 
 export default function Canvas() {
+  const { language, setLanguage } = useContext(StateContext);
   const [dimensions, setDimensions] = useState({
     width: 0,
     height: 0,
@@ -106,7 +108,7 @@ export default function Canvas() {
           })}
         </Layer>
       </Stage>
-      <p>رنگ کلیک کن یا حرکت بده</p>
+      <p>{language ? "Click or drag colors" : "رنگ کلیک کن یا حرکت بده"}</p>
     </div>
   );
 }

@@ -1,4 +1,5 @@
-import { useState, useContext, useRef, Fragment, useEffect } from "react";
+import { useState, useEffect, useContext, Fragment } from "react";
+import { StateContext } from "@/context/stateContext";
 import classes from "./home.module.scss";
 import Menu from "@/components/Menu";
 import dynamic from "next/dynamic";
@@ -24,9 +25,9 @@ const Canvas = dynamic(() => import("../components/Canvas"), {
 });
 
 export default function Home() {
+  const { language, setLanguage } = useContext(StateContext);
   const [colorOne, setColorOne] = useState("#AF7AC5");
   const [colorTwo, setColorTwo] = useState("#F39C12");
-
   const [expandProcess, setExpandProcess] = useState(false);
   const [expandEducation, setExpandEducation] = useState(false);
 
@@ -63,54 +64,75 @@ export default function Home() {
       </div>
       <div className={classes.header}>
         <h2 className={classes.english}>
-          Minimal{" "}
+          Minimal
           <span style={{ color: colorOne }} className={classes.english}>
-            Tech Lab
+            TechLab
           </span>
         </h2>
-        <h2>
-          لابراتوار فناوری <span style={{ color: colorTwo }}>مینیمال</span>
-        </h2>
+        {!language && (
+          <h2>
+            لابراتوار فناوری <span style={{ color: colorTwo }}>مینیمال</span>
+          </h2>
+        )}
       </div>
       <div className={classes.bannerContainer}>
         <div className={classes.banner}>
           <ScienceIcon sx={{ fontSize: 45, color: "#F06060" }} />
-          <h2>طراحی تجربه کاربری</h2>
-          <h2 className={classes.english}>User Experience</h2>
+          {!language && <h3>طراحی تجربه کاربری</h3>}
+          <h3>User Experience Design</h3>
         </div>
         <div className={classes.banner}>
           <BrushIcon sx={{ fontSize: 45, color: "#5DADE2" }} />
-          <h2>نمونه سازی رابط کاربری</h2>
-          <h2 className={classes.english}>User Interface</h2>
+          {!language && <h3>نمونه سازی رابط کاربری</h3>}
+          <h3>User Interface Design</h3>
         </div>
         <div className={classes.banner}>
           <PrecisionManufacturingIcon sx={{ fontSize: 45, color: "#AF7AC5" }} />
-          <h2>توسعه نرم افزار، وب اپلیکیشن، وب سایت</h2>
+          {!language ? (
+            <h3>توسعه نرم افزار، وب اپلیکیشن، وب سایت</h3>
+          ) : (
+            <h3>Software development, Web application, Website</h3>
+          )}
         </div>
         <div className={classes.banner}>
           <ScatterPlotIcon sx={{ fontSize: 45, color: "#F39C12" }} />
-          <h2>مدل سازی ساختار داده، پشتیبانی و ارتقا کارایی</h2>
+          {!language ? (
+            <h3>مدل سازی ساختار داده، پشتیبانی و ارتقا کارایی</h3>
+          ) : (
+            <h3>Data structure, Support, Performance improvement</h3>
+          )}
         </div>
       </div>
       <div className={classes.button}>
         <button
           onClick={() =>
             window.open(
-              "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link",
-              "_ self"
+              !language
+                ? "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link"
+                : "https://docs.google.com/forms/d/e/1FAIpQLSfpCOHJ0Y0myLiaVxvHBjypDKYeA8eE-YsrtBctyzvLJ07ZaA/viewform?usp=sf_link",
+              "_self"
             )
           }
         >
-          درخواست مشاوره
+          {!language ? "درخواست مشاوره" : "Request consultation"}
         </button>
       </div>
       <div className={classes.description}>
-        <h3>
-          هدف از توسعه نرم افزار انتقال ایده ها و طرح ها به راه حل های عملی و حل
-          مشکلات است. مهارت های برنامه نویسی ما این فرصت را برای شما فراهم می
-          کند تا طرح های مینیمال و در عین حال نوآورانه، خلاق تر و سازنده تر
-          باشند
-        </h3>
+        {!language ? (
+          <h3>
+            هدف ما از توسعه نرم افزار انتقال ایده ها و طرح ها به راه حل های عملی
+            و حل مشکلات است. مهارت های برنامه نویسی ما این فرصت را برای شما
+            فراهم می کند تا طرح های مینیمال و در عین حال نوآورانه، خلاق تر و
+            سازنده تر باشند
+          </h3>
+        ) : (
+          <h3>
+            Our purpose to develop a software is to transfer ideas and plans to
+            practical solutions and solve problems. Our programming skills
+            provide you with the opportunity to have minimal and innovative
+            designs, yet creative and productive
+          </h3>
+        )}
       </div>
       <div className={classes.spinner}></div>
       <div className={classes.imageHero}>
@@ -128,69 +150,172 @@ export default function Home() {
           className={classes.rowTitle}
           onClick={() => setExpandProcess(!expandProcess)}
         >
-          <h2>فرایند توسعه نرم‌‌افزار</h2>
-          {expandProcess ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          {!language ? (
+            <Fragment>
+              <h3>فرایند توسعه نرم‌‌افزار</h3>
+              {expandProcess ? (
+                <ExpandLessIcon sx={{ fontSize: 30 }} />
+              ) : (
+                <ExpandMoreIcon sx={{ fontSize: 30 }} />
+              )}
+            </Fragment>
+          ) : (
+            <Fragment>
+              {expandProcess ? (
+                <ExpandLessIcon sx={{ fontSize: 30 }} />
+              ) : (
+                <ExpandMoreIcon sx={{ fontSize: 30 }} />
+              )}
+              <h3>Software development process</h3>
+            </Fragment>
+          )}
         </div>
         {expandProcess && (
           <div className="animate__animated animate__zoomIn">
             <div className={classes.item}>
-              <div className={classes.row}>
-                <ScienceIcon sx={{ color: "#F06060" }} />
-                <h3>تحلیل نیازها</h3>
-              </div>
-              <p>
-                برای توسعه نرم‌افزار طوفان فکری درمورد فرایند صورت می‌گیرد.
-                کارکردها و خدمات نرم‌افزار شناسایی میشود تا راه حل هایی ضروری و
-                مفید برای مخاطب و مشتریان شناسایی شود. برای دستیابی به محصول
-                باکیفیت، جزییات هر بخش از کار، طرح نهایی و پارامترها بررسی میشود
-              </p>
+              {!language ? (
+                <div className={classes.row}>
+                  <ScienceIcon sx={{ color: "#F06060" }} />
+                  <h3>تحلیل نیازها</h3>
+                </div>
+              ) : (
+                <div className={classes.rowEnglish}>
+                  <ScienceIcon sx={{ color: "#F06060" }} />
+                  <h3>Requirements analysis</h3>
+                </div>
+              )}
+              {!language ? (
+                <p>
+                  برای توسعه نرم‌افزار طوفان فکری درمورد فرایند صورت می‌گیرد.
+                  کارکردها و خدمات نرم‌افزار شناسایی میشود تا راه حل هایی ضروری
+                  و مفید برای مخاطب و مشتریان شناسایی شود. برای دستیابی به محصول
+                  باکیفیت، جزییات هر بخش از کار، طرح نهایی و پارامترها بررسی
+                  میشود
+                </p>
+              ) : (
+                <p>
+                  For software development, a brainstorming process takes place.
+                  Software functions and services are identified to spot
+                  necessary and useful solutions for the audience and customers.
+                  To achieve a high-quality product, the details of each part of
+                  the work, the final design and the parameters are evaluated
+                </p>
+              )}
             </div>
             <div className={classes.item}>
-              <div className={classes.row}>
-                <BrushIcon sx={{ color: "#5DADE2" }} />
-                <h3>توسعه طراحی</h3>
-              </div>
-              <p>
-                مشخصه‌های فنی تخصصی مورد نیاز برای خلق نرم‌افزار ترسیم میشود.
-                عواملی مانند فناوری‌های قابل‌ استفاده، زمان، بودجه، محدودیت‌های
-                پروژه، روش و طراحی معماری شناسایی میشود. معماری طراحی، اجزا،
-                ارتباطات، فرانت اند و جریان کاربر مشخص میشود
-              </p>
+              {!language ? (
+                <div className={classes.row}>
+                  <BrushIcon sx={{ color: "#5DADE2" }} />
+                  <h3>توسعه طراحی</h3>
+                </div>
+              ) : (
+                <div className={classes.rowEnglish}>
+                  <BrushIcon sx={{ color: "#5DADE2" }} />
+                  <h3>Design development</h3>
+                </div>
+              )}
+              {!language ? (
+                <p>
+                  مشخصه‌های فنی تخصصی مورد نیاز برای خلق نرم‌افزار ترسیم میشود.
+                  عواملی مانند فناوری‌های قابل‌ استفاده، زمان، بودجه،
+                  محدودیت‌های پروژه، روش و طراحی معماری شناسایی میشود. معماری
+                  طراحی، اجزا، ارتباطات، فرانت اند و جریان کاربر مشخص میشود
+                </p>
+              ) : (
+                <p>
+                  The specialized technical characteristics needed to create the
+                  software are drawn. Factors such as applicable technologies,
+                  time, budget, limitations and architectural design are
+                  identified. Design architecture, components, communications,
+                  front end and user flow are specified
+                </p>
+              )}
             </div>
             <div className={classes.item}>
-              <div className={classes.row}>
-                <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-                <h3>توسعه و پیاده‌سازی</h3>
-              </div>
-              <p>
-                براساس مشخصه‌های محصول و نیازمندی‌هایی که در مراحل قبل کدنویسی
-                میشود. فرانت اند و بک اند توسعه داده میشود و کدها بازبینی و
-                آزمایش میشوند. سپس محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی
-                محصول با نیازها مورد آزمایش قرار میگیرد
-              </p>
+              {!language ? (
+                <div className={classes.row}>
+                  <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                  <h3>توسعه و پیاده‌سازی</h3>
+                </div>
+              ) : (
+                <div className={classes.rowEnglish}>
+                  <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                  <h3>Development and implementation</h3>
+                </div>
+              )}
+              {!language ? (
+                <p>
+                  براساس مشخصه‌های محصول و نیازمندی‌هایی که در مراحل قبل کدنویسی
+                  میشود. فرانت اند و بک اند توسعه داده میشود و کدها بازبینی و
+                  آزمایش میشوند. سپس محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی
+                  محصول با نیازها مورد آزمایش قرار میگیرد
+                </p>
+              ) : (
+                <p>
+                  Based on the product characteristics and requirements in the
+                  previous stages of design, Front-end and back-end are
+                  developed and codes are reviewed and tested. Then the product
+                  reaches the stage of implementation and coordination with
+                  requirements
+                </p>
+              )}
             </div>
             <div className={classes.item}>
-              <div className={classes.row}>
-                <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-                <h3>آزمایش</h3>
-              </div>
-              <p>
-                در مرحله‌ آزمایش محصول از لحاظ داشتن باگ آزموده می‌شود و عملکرد
-                آن پیش از تحویل به کاربر بازبینی میشود تا زمانی که نرم‌افزار
-                بدون وجود باگ کار کند و مطابق با نیازها باشد
-              </p>
+              {!language ? (
+                <div className={classes.row}>
+                  <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                  <h3>آزمایش</h3>
+                </div>
+              ) : (
+                <div className={classes.rowEnglish}>
+                  <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                  <h3>Testing</h3>
+                </div>
+              )}
+              {!language ? (
+                <p>
+                  در مرحله‌ آزمایش محصول از لحاظ داشتن باگ آزموده می‌شود و
+                  عملکرد آن پیش از تحویل به کاربر بازبینی میشود تا زمانی که
+                  نرم‌افزار بدون وجود باگ کار کند و مطابق با نیازها باشد
+                </p>
+              ) : (
+                <p>
+                  In the testing stage, the product is tested for bugs and
+                  performance. It is reviewed before delivery to the end-user
+                  until the software works without bugs and satisfies all
+                  requirements
+                </p>
+              )}
             </div>
             <div className={classes.item}>
-              <div className={classes.row}>
-                <ScatterPlotIcon sx={{ color: "#F39C12" }} />
-                <h3>استقرار نرم‌افزار و پشتیبانی</h3>
-              </div>
-              <p>
-                هنگامی که نرم‌افزار هیچ نقصی نداشته باشد به مشتری ارائه داده
-                میشود. پس از ارائه‌ نسخه‌ تولیدی نرم‌افزار، مشکلات کاربر هنگام
-                کار با محصول مدیریت میشود. درصورتی‌ که نرم‌افزار با مشکل روبه‌رو
-                شود آپدیت انجام میگیرد
-              </p>
+              {!language ? (
+                <div className={classes.row}>
+                  <ScatterPlotIcon sx={{ color: "#F39C12" }} />
+                  <h3>استقرار نرم‌افزار و پشتیبانی</h3>
+                </div>
+              ) : (
+                <div className={classes.rowEnglish}>
+                  <ScatterPlotIcon sx={{ color: "#F39C12" }} />
+                  <h3>Software deployment and support</h3>
+                </div>
+              )}
+
+              {!language ? (
+                <p>
+                  هنگامی که نرم‌افزار هیچ نقصی نداشته باشد به مشتری ارائه داده
+                  میشود. پس از ارائه‌ نسخه‌ تولیدی نرم‌افزار، مشکلات کاربر هنگام
+                  کار با محصول مدیریت میشود. درصورتی‌ که نرم‌افزار با مشکل
+                  روبه‌رو شود آپدیت انجام میگیرد
+                </p>
+              ) : (
+                <p>
+                  When the software does not have any defects, it will be
+                  provided to the customer. After providing the production
+                  version of the software, user's problems with the product are
+                  managed. If the software is facing a problem update will be
+                  completed
+                </p>
+              )}
             </div>
           </div>
         )}
@@ -200,23 +325,42 @@ export default function Home() {
           className={classes.rowTitle}
           onClick={() => setExpandEducation(!expandEducation)}
         >
-          <h2>تحصیلات</h2>
-          {expandEducation ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          {!language ? (
+            <Fragment>
+              <h3>تحصیلات</h3>
+              {expandEducation ? (
+                <ExpandLessIcon sx={{ fontSize: 30 }} />
+              ) : (
+                <ExpandMoreIcon sx={{ fontSize: 30 }} />
+              )}
+            </Fragment>
+          ) : (
+            <Fragment>
+              {expandProcess ? (
+                <ExpandLessIcon sx={{ fontSize: 30 }} />
+              ) : (
+                <ExpandMoreIcon sx={{ fontSize: 30 }} />
+              )}
+              <h3>Education</h3>
+            </Fragment>
+          )}
         </div>
         {expandEducation && (
           <div className="animate__animated animate__zoomIn">
             <div className={classes.item}>
-              <div className={classes.row}>
+              <div className={classes.rowEnglish}>
                 <Image width={40} height={40} src={ga} alt="lab" priority />
-                <h3 className={classes.english}>
-                  General Assembly Melbourne Australia
-                </h3>
+                <h3>General Assembly Melbourne Australia</h3>
               </div>
-              <p>مهندس نرم افزار همه جانبه</p>
-              <p className={classes.english}>2019</p>
+              {!language ? (
+                <p>مهندس نرم افزار همه جانبه</p>
+              ) : (
+                <p>Software Engineering Immersive</p>
+              )}
+              <p>2019</p>
             </div>
             <div className={classes.item}>
-              <div className={classes.row}>
+              <div className={classes.rowEnglish}>
                 <Image
                   width={40}
                   height={40}
@@ -224,22 +368,18 @@ export default function Home() {
                   alt="lab"
                   priority
                 />
-                <h3 className={classes.english}>
-                  The University of Newcastle Australia
-                </h3>
+                <h3>The University of Newcastle Australia</h3>
               </div>
-              <p>ارشد معماری</p>
-              <p className={classes.english}>2011</p>
+              {!language ? <p>ارشد معماری</p> : <p>Master of Architecture</p>}
+              <p>2011</p>
             </div>
             <div className={classes.item}>
-              <div className={classes.row}>
+              <div className={classes.rowEnglish}>
                 <Image width={40} height={40} src={deakin} alt="lab" priority />
-                <h3 className={classes.english}>
-                  Deakin University Melbourne Australia
-                </h3>
+                <h3>Deakin University Melbourne Australia</h3>
               </div>
-              <p>کارشناس طراحی</p>
-              <p className={classes.english}>2009</p>
+              {!language ? <p>کارشناس طراحی</p> : <p>Bachelor of Design</p>}
+              <p>2009</p>
             </div>
           </div>
         )}
@@ -248,17 +388,28 @@ export default function Home() {
         <button
           onClick={() =>
             window.open(
-              "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link",
-              "_ self"
+              !language
+                ? "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link"
+                : "https://docs.google.com/forms/d/e/1FAIpQLSfpCOHJ0Y0myLiaVxvHBjypDKYeA8eE-YsrtBctyzvLJ07ZaA/viewform?usp=sf_link",
+              "_self"
             )
           }
         >
-          درخواست مشاوره
+          {!language ? "درخواست مشاوره" : "Request consultation"}
         </button>
       </div>
       <div className={classes.description}>
-        <h3>توجه به جزییات و توسعه پلتفورم مینیمال، مدرن و سریع </h3>
-        <h3>مطابق با استانداردهای جهانی تنها شروع کار است</h3>
+        {!language ? (
+          <h3>
+            توجه به جزییات و توسعه پلتفورم مینیمال، مدرن و سریع مطابق با
+            استانداردهای جهانی تنها شروع کار است
+          </h3>
+        ) : (
+          <h3>
+            Paying attention to details and developing a minimal, modern and
+            fast platform according to global standards is just the beginning
+          </h3>
+        )}
       </div>
       <div
         className={classes.imageBottom}
@@ -299,11 +450,11 @@ export default function Home() {
           onClick={() => window.open("tel:09121089341", "_self")}
         >
           <PhoneIphoneOutlinedIcon />
-          <p className={classes.english}>0912 108 9341</p>
+          <p>0912 108 9341</p>
         </div>
         <div className={classes.row}>
           <AlternateEmailIcon />
-          <p className={classes.english}>pouyan.mad@gmail.com</p>
+          <p>pouyan.mad@gmail.com</p>
         </div>
         <div
           className={classes.row}
@@ -315,7 +466,7 @@ export default function Home() {
           }
         >
           <LinkedInIcon />
-          <p className={classes.english}>LinkedIn</p>
+          <p>LinkedIn</p>
         </div>
       </div>
     </div>
