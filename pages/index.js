@@ -114,7 +114,7 @@ export default function Home() {
             )
           }
         >
-          {!language ? "درخواست مشاوره" : "Request consultation"}
+          {!language ? "درخواست مشاوره" : "Request Consultation"}
         </button>
       </div>
       <div className={classes.description}>
@@ -193,7 +193,7 @@ export default function Home() {
                   میشود
                 </p>
               ) : (
-                <p>
+                <p className={classes.rowEnglish}>
                   For software development, a brainstorming process takes place.
                   Software functions and services are identified to spot
                   necessary and useful solutions for the audience and customers.
@@ -222,12 +222,12 @@ export default function Home() {
                   طراحی، اجزا، ارتباطات، فرانت اند و جریان کاربر مشخص میشود
                 </p>
               ) : (
-                <p>
-                  The specialized technical characteristics needed to create the
-                  software are drawn. Factors such as applicable technologies,
-                  time, budget, limitations and architectural design are
-                  identified. Design architecture, components, communications,
-                  front end and user flow are specified
+                <p className={classes.rowEnglish}>
+                  The technical characteristics needed to create the software
+                  are drawn. Factors such as applicable technologies, time,
+                  budget, limitations and architectural design are identified.
+                  Design architecture, components, communications, front end and
+                  user flow are specified
                 </p>
               )}
             </div>
@@ -251,7 +251,7 @@ export default function Home() {
                   محصول با نیازها مورد آزمایش قرار میگیرد
                 </p>
               ) : (
-                <p>
+                <p className={classes.rowEnglish}>
                   Based on the product characteristics and requirements in the
                   previous stages of design, Front-end and back-end are
                   developed and codes are reviewed and tested. Then the product
@@ -279,7 +279,7 @@ export default function Home() {
                   نرم‌افزار بدون وجود باگ کار کند و مطابق با نیازها باشد
                 </p>
               ) : (
-                <p>
+                <p className={classes.rowEnglish}>
                   In the testing stage, the product is tested for bugs and
                   performance. It is reviewed before delivery to the end-user
                   until the software works without bugs and satisfies all
@@ -308,7 +308,7 @@ export default function Home() {
                   روبه‌رو شود آپدیت انجام میگیرد
                 </p>
               ) : (
-                <p>
+                <p className={classes.rowEnglish}>
                   When the software does not have any defects, it will be
                   provided to the customer. After providing the production
                   version of the software, user's problems with the product are
@@ -350,14 +350,15 @@ export default function Home() {
             <div className={classes.item}>
               <div className={classes.rowEnglish}>
                 <Image width={40} height={40} src={ga} alt="lab" priority />
-                <h3>General Assembly Melbourne Australia</h3>
+                <h3>General Assembly Melbourne Australia - 2019</h3>
               </div>
               {!language ? (
-                <p>مهندس نرم افزار همه جانبه</p>
+                <p className={classes.rowEnglish}>مهندس نرم افزار همه جانبه</p>
               ) : (
-                <p>Software Engineering Immersive</p>
+                <p className={classes.rowEnglish}>
+                  Software Engineering Immersive
+                </p>
               )}
-              <p>2019</p>
             </div>
             <div className={classes.item}>
               <div className={classes.rowEnglish}>
@@ -368,18 +369,24 @@ export default function Home() {
                   alt="lab"
                   priority
                 />
-                <h3>The University of Newcastle Australia</h3>
+                <h3>The University of Newcastle Australia - 2011</h3>
               </div>
-              {!language ? <p>ارشد معماری</p> : <p>Master of Architecture</p>}
-              <p>2011</p>
+              {!language ? (
+                <p className={classes.rowEnglish}>ارشد معماری</p>
+              ) : (
+                <p className={classes.rowEnglish}>Master of Architecture</p>
+              )}
             </div>
             <div className={classes.item}>
               <div className={classes.rowEnglish}>
                 <Image width={40} height={40} src={deakin} alt="lab" priority />
-                <h3>Deakin University Melbourne Australia</h3>
+                <h3>Deakin University Melbourne Australia - 2009</h3>
               </div>
-              {!language ? <p>کارشناس طراحی</p> : <p>Bachelor of Design</p>}
-              <p>2009</p>
+              {!language ? (
+                <p className={classes.rowEnglish}>کارشناس طراحی</p>
+              ) : (
+                <p className={classes.rowEnglish}>Bachelor of Design</p>
+              )}
             </div>
           </div>
         )}
@@ -395,7 +402,7 @@ export default function Home() {
             )
           }
         >
-          {!language ? "درخواست مشاوره" : "Request consultation"}
+          {!language ? "درخواست مشاوره" : "Request Consultation"}
         </button>
       </div>
       <div className={classes.description}>

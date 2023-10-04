@@ -148,7 +148,6 @@
   width: 600px;
   padding: 12px;
   margin-bottom: 100px;
-  text-align: justify;
   @include mixins.border-radius();
 
   .rowTitle,
@@ -165,10 +164,15 @@
     }
   }
 
+  p {
+    text-align: right;
+  }
+
   .rowEnglish {
     display: flex;
     margin-bottom: 8px;
     align-items: center;
+    text-align: left;
 
     h3 {
       margin-left: 20px;
@@ -177,6 +181,7 @@
 
   .rowTitle {
     justify-content: space-between;
+    align-items: center;
 
     @include mixins.desktop {
       &:hover {
