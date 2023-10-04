@@ -240,7 +240,7 @@ export default function Home() {
               ) : (
                 <div className={classes.rowEnglish}>
                   <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-                  <h3>Development and implementation</h3>
+                  <h3>Development & implementation</h3>
                 </div>
               )}
               {!language ? (
@@ -291,12 +291,12 @@ export default function Home() {
               {!language ? (
                 <div className={classes.row}>
                   <ScatterPlotIcon sx={{ color: "#F39C12" }} />
-                  <h3>استقرار نرم‌افزار و پشتیبانی</h3>
+                  <h3>استقرار و پشتیبانی</h3>
                 </div>
               ) : (
                 <div className={classes.rowEnglish}>
                   <ScatterPlotIcon sx={{ color: "#F39C12" }} />
-                  <h3>Software deployment and support</h3>
+                  <h3>Deployment & support</h3>
                 </div>
               )}
 
@@ -350,7 +350,7 @@ export default function Home() {
             <div className={classes.item}>
               <div className={classes.rowEnglish}>
                 <Image width={40} height={40} src={ga} alt="lab" priority />
-                <h3>General Assembly Melbourne Australia - 2019</h3>
+                <h3>General Assembly Melbourne Australia</h3>
               </div>
               {!language ? (
                 <p className={classes.rowEnglish}>مهندس نرم افزار همه جانبه</p>
@@ -359,6 +359,7 @@ export default function Home() {
                   Software Engineering Immersive
                 </p>
               )}
+              <p className={classes.rowEnglish}>2019</p>
             </div>
             <div className={classes.item}>
               <div className={classes.rowEnglish}>
@@ -369,24 +370,26 @@ export default function Home() {
                   alt="lab"
                   priority
                 />
-                <h3>The University of Newcastle Australia - 2011</h3>
+                <h3>The University of Newcastle Australia</h3>
               </div>
               {!language ? (
                 <p className={classes.rowEnglish}>ارشد معماری</p>
               ) : (
                 <p className={classes.rowEnglish}>Master of Architecture</p>
               )}
+              <p className={classes.rowEnglish}>2011</p>
             </div>
             <div className={classes.item}>
               <div className={classes.rowEnglish}>
                 <Image width={40} height={40} src={deakin} alt="lab" priority />
-                <h3>Deakin University Melbourne Australia - 2009</h3>
+                <h3>Deakin University Melbourne Australia</h3>
               </div>
               {!language ? (
                 <p className={classes.rowEnglish}>کارشناس طراحی</p>
               ) : (
                 <p className={classes.rowEnglish}>Bachelor of Design</p>
               )}
+              <p className={classes.rowEnglish}>2009</p>
             </div>
           </div>
         )}
