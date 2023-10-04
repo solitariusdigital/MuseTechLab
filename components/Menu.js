@@ -3,7 +3,7 @@ import { StateContext } from "@/context/stateContext";
 import Router from "next/router";
 import classes from "./Menu.module.scss";
 import Image from "next/legacy/image";
-import MinimalTechLab from "@/assets/MinimalTechLab.svg";
+import MuseTechLab from "@/assets/MuseTechLab.svg";
 import logo from "@/assets/lab.png";
 
 export default function Menu() {
@@ -15,7 +15,7 @@ export default function Menu() {
         <Image
           width={220}
           height={100}
-          src={MinimalTechLab}
+          src={MuseTechLab}
           alt="logo"
           onClick={() => Router.push("/")}
           priority

@@ -20,5 +20,5 @@ a {
 }
 
 button {
-  @include mixins.button(config.$action, config.$black, 170px);
+  @include mixins.button(config.$action, config.$black, 200px);
 }

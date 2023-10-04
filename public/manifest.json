@@ -4,8 +4,8 @@
   "display": "browser",
   "scope": "/",
   "start_url": "/",
-  "name": "MinimalTechLab",
-  "short_name": "MinimalTechLab",
+  "name": "MuseTechLab",
+  "short_name": "MuseTechLab",
   "icons": [
     {
       "src": "/icon-192x192.png",

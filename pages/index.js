@@ -16,7 +16,7 @@ import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturi
 import ScatterPlotIcon from "@mui/icons-material/ScatterPlot";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import logo from "@/assets/lab.png";
-import MinimalTechLab from "@/assets/MinimalTechLab.svg";
+import MuseTechLab from "@/assets/MuseTechLab.svg";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
@@ -64,14 +64,14 @@ export default function Home() {
       </div>
       <div className={classes.header}>
         <h2 className={classes.english}>
-          Minimal
+          Muse
           <span style={{ color: colorOne }} className={classes.english}>
             TechLab
           </span>
         </h2>
         {!language && (
           <h2>
-            لابراتوار فناوری <span style={{ color: colorTwo }}>مینیمال</span>
+            لابراتوار فناوری <span style={{ color: colorTwo }}>میوز</span>
           </h2>
         )}
       </div>
@@ -123,14 +123,17 @@ export default function Home() {
             هدف ما از توسعه نرم افزار انتقال ایده ها و طرح ها به راه حل های عملی
             و حل مشکلات است. مهارت های برنامه نویسی ما این فرصت را برای شما
             فراهم می کند تا طرح های مینیمال و در عین حال نوآورانه، خلاق تر و
-            سازنده تر باشند
+            سازنده تر باشند. توجه به جزییات و توسعه پلتفورم مینیمال، مدرن و سریع
+            مطابق با استانداردهای جهانی تنها شروع کار است
           </h3>
         ) : (
           <h3>
             Our purpose to develop a software is to transfer ideas and plans to
             practical solutions and solve problems. Our programming skills
             provide you with the opportunity to have minimal and innovative
-            designs, yet creative and productive
+            designs, yet creative and productive. Paying attention to details
+            and developing a minimal, modern and fast platform according to
+            global standards is just the beginning
           </h3>
         )}
       </div>
@@ -411,13 +414,16 @@ export default function Home() {
       <div className={classes.description}>
         {!language ? (
           <h3>
-            توجه به جزییات و توسعه پلتفورم مینیمال، مدرن و سریع مطابق با
-            استانداردهای جهانی تنها شروع کار است
+            میوز منبع الهام یک هنرمند است، اما این منبع می‌تواند به اشکال مختلف
+            بیاید، چه اینطور باشد خود را به عنوان الگوی یک هنرمند یا فقط ارائه
+            مشاوره و پشتیبانی از طریق فرآیندی خلاق
           </h3>
         ) : (
           <h3>
-            Paying attention to details and developing a minimal, modern and
-            fast platform according to global standards is just the beginning
+            “A muse supposedly provides a source of inspiration for an artist,
+            but that source can come in so many different forms, whether that’s
+            posing as an artist’s model or just offering advice and support
+            through the creative process”
           </h3>
         )}
       </div>
@@ -443,7 +449,7 @@ export default function Home() {
       <Image
         width={220}
         height={220}
-        src={MinimalTechLab}
+        src={MuseTechLab}
         alt="logo"
         onClick={() =>
           window.scrollTo({
