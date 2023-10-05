@@ -397,7 +397,7 @@ export default function Home() {
           </div>
         )}
       </div>
-      {/* <div className={classes.button}>
+      <div className={classes.button}>
         <button
           onClick={() =>
             window.open(
@@ -410,7 +410,7 @@ export default function Home() {
         >
           {!language ? "درخواست مشاوره" : "Consultation"}
         </button>
-      </div> */}
+      </div>
       <div className={classes.description}>
         {!language ? (
           <h3>

@@ -142,12 +142,12 @@
 }
 
 .infomration {
-  color: config.$white;
-  border: 1px solid config.$white;
-  box-shadow: config.$card-shadow;
   width: 600px;
   padding: 12px;
   margin-bottom: 100px;
+  color: config.$white;
+  border: 1px solid config.$white;
+  // box-shadow: config.$card-shadow;
   @include mixins.border-radius();
 
   .rowTitle,
