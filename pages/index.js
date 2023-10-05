@@ -349,21 +349,23 @@ export default function Home() {
           )}
         </div>
         {expandEducation && (
-          <div className="animate__animated animate__zoomIn">
+          <div>
             <div className={classes.item}>
-              <div>
+              <div className={classes.rowEnglish}>
                 <Image width={40} height={40} src={ga} alt="lab" priority />
                 <h3>General Assembly Melbourne Australia</h3>
               </div>
               {!language ? (
-                <p>مهندس نرم افزار همه جانبه</p>
+                <p className={classes.rowEnglish}>مهندس نرم افزار همه جانبه</p>
               ) : (
-                <p>Software Engineering Immersive</p>
+                <p className={classes.rowEnglish}>
+                  Software Engineering Immersive
+                </p>
               )}
-              <p>2019</p>
+              <p className={classes.rowEnglish}>2019</p>
             </div>
             <div className={classes.item}>
-              <div>
+              <div className={classes.rowEnglish}>
                 <Image
                   width={40}
                   height={40}
@@ -373,16 +375,24 @@ export default function Home() {
                 />
                 <h3>The University of Newcastle Australia</h3>
               </div>
-              {!language ? <p>ارشد معماری</p> : <p>Master of Architecture</p>}
-              <p>2011</p>
+              {!language ? (
+                <p className={classes.rowEnglish}>ارشد معماری</p>
+              ) : (
+                <p className={classes.rowEnglish}>Master of Architecture</p>
+              )}
+              <p className={classes.rowEnglish}>2011</p>
             </div>
             <div className={classes.item}>
-              <div>
+              <div className={classes.rowEnglish}>
                 <Image width={40} height={40} src={deakin} alt="lab" priority />
                 <h3>Deakin University Melbourne Australia</h3>
               </div>
-              {!language ? <p>کارشناس طراحی</p> : <p>Bachelor of Design</p>}
-              <p>2009</p>
+              {!language ? (
+                <p className={classes.rowEnglish}>کارشناس طراحی</p>
+              ) : (
+                <p className={classes.rowEnglish}>Bachelor of Design</p>
+              )}
+              <p className={classes.rowEnglish}>2009</p>
             </div>
           </div>
         )}
