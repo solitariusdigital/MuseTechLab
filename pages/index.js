@@ -151,6 +151,80 @@ export default function Home() {
       <div className={classes.infomration}>
         <div
           className={classes.rowTitle}
+          onClick={() => setExpandEducation(!expandEducation)}
+        >
+          {!language ? (
+            <Fragment>
+              <h3>تحصیلات</h3>
+              {expandEducation ? (
+                <ExpandLessIcon sx={{ fontSize: 30 }} />
+              ) : (
+                <ExpandMoreIcon sx={{ fontSize: 30 }} />
+              )}
+            </Fragment>
+          ) : (
+            <Fragment>
+              {expandEducation ? (
+                <ExpandLessIcon sx={{ fontSize: 30 }} />
+              ) : (
+                <ExpandMoreIcon sx={{ fontSize: 30 }} />
+              )}
+              <h3>Education</h3>
+            </Fragment>
+          )}
+        </div>
+        {expandEducation && (
+          <div className="animate__animated animate__zoomIn">
+            <div className={classes.item}>
+              <div className={classes.rowEnglish}>
+                <Image width={40} height={40} src={ga} alt="lab" priority />
+                <h3>General Assembly Melbourne Australia</h3>
+              </div>
+              {!language ? (
+                <p className={classes.rowEnglish}>مهندس نرم افزار همه جانبه</p>
+              ) : (
+                <p className={classes.rowEnglish}>
+                  Software Engineering Immersive
+                </p>
+              )}
+              <p className={classes.rowEnglish}>2019</p>
+            </div>
+            <div className={classes.item}>
+              <div className={classes.rowEnglish}>
+                <Image
+                  width={40}
+                  height={40}
+                  src={newcastle}
+                  alt="lab"
+                  priority
+                />
+                <h3>The University of Newcastle Australia</h3>
+              </div>
+              {!language ? (
+                <p className={classes.rowEnglish}>ارشد معماری</p>
+              ) : (
+                <p className={classes.rowEnglish}>Master of Architecture</p>
+              )}
+              <p className={classes.rowEnglish}>2011</p>
+            </div>
+            <div className={classes.item}>
+              <div className={classes.rowEnglish}>
+                <Image width={40} height={40} src={deakin} alt="lab" priority />
+                <h3>Deakin University Melbourne Australia</h3>
+              </div>
+              {!language ? (
+                <p className={classes.rowEnglish}>کارشناس طراحی</p>
+              ) : (
+                <p className={classes.rowEnglish}>Bachelor of Design</p>
+              )}
+              <p className={classes.rowEnglish}>2009</p>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className={classes.infomration}>
+        <div
+          className={classes.rowTitle}
           onClick={() => setExpandProcess(!expandProcess)}
         >
           {!language ? (
@@ -319,80 +393,6 @@ export default function Home() {
                   completed
                 </p>
               )}
-            </div>
-          </div>
-        )}
-      </div>
-      <div className={classes.infomration}>
-        <div
-          className={classes.rowTitle}
-          onClick={() => setExpandEducation(!expandEducation)}
-        >
-          {!language ? (
-            <Fragment>
-              <h3>تحصیلات</h3>
-              {expandEducation ? (
-                <ExpandLessIcon sx={{ fontSize: 30 }} />
-              ) : (
-                <ExpandMoreIcon sx={{ fontSize: 30 }} />
-              )}
-            </Fragment>
-          ) : (
-            <Fragment>
-              {expandEducation ? (
-                <ExpandLessIcon sx={{ fontSize: 30 }} />
-              ) : (
-                <ExpandMoreIcon sx={{ fontSize: 30 }} />
-              )}
-              <h3>Education</h3>
-            </Fragment>
-          )}
-        </div>
-        {expandEducation && (
-          <div>
-            <div className={classes.item}>
-              <div className={classes.rowEnglish}>
-                <Image width={40} height={40} src={ga} alt="lab" priority />
-                <h3>General Assembly Melbourne Australia</h3>
-              </div>
-              {!language ? (
-                <p className={classes.rowEnglish}>مهندس نرم افزار همه جانبه</p>
-              ) : (
-                <p className={classes.rowEnglish}>
-                  Software Engineering Immersive
-                </p>
-              )}
-              <p className={classes.rowEnglish}>2019</p>
-            </div>
-            <div className={classes.item}>
-              <div className={classes.rowEnglish}>
-                <Image
-                  width={40}
-                  height={40}
-                  src={newcastle}
-                  alt="lab"
-                  priority
-                />
-                <h3>The University of Newcastle Australia</h3>
-              </div>
-              {!language ? (
-                <p className={classes.rowEnglish}>ارشد معماری</p>
-              ) : (
-                <p className={classes.rowEnglish}>Master of Architecture</p>
-              )}
-              <p className={classes.rowEnglish}>2011</p>
-            </div>
-            <div className={classes.item}>
-              <div className={classes.rowEnglish}>
-                <Image width={40} height={40} src={deakin} alt="lab" priority />
-                <h3>Deakin University Melbourne Australia</h3>
-              </div>
-              {!language ? (
-                <p className={classes.rowEnglish}>کارشناس طراحی</p>
-              ) : (
-                <p className={classes.rowEnglish}>Bachelor of Design</p>
-              )}
-              <p className={classes.rowEnglish}>2009</p>
             </div>
           </div>
         )}
