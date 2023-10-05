@@ -20,7 +20,7 @@ export default function Canvas() {
     { fill: "#5DADE2" },
     { fill: "#AF7AC5" },
     { fill: "#F39C12" },
-    { fill: "#52BE80" },
+    { fill: "#1b1b1b" },
     { fill: "#8CBEB2" },
     { fill: "#F4D03F" },
   ];

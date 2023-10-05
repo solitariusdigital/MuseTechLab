@@ -20,16 +20,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: config.$action;
 
   @include mixins.desktop {
     &:hover {
       cursor: pointer;
-      color: config.$action;
     }
   }
 
   p {
     font-size: config.$tiny-font;
+    color: config.$white;
   }
 }

@@ -15,7 +15,6 @@ import ScienceIcon from "@mui/icons-material/Science";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import ScatterPlotIcon from "@mui/icons-material/ScatterPlot";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import logo from "@/assets/lab.png";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import Pyramid from "@/components/Pyramid";
@@ -36,7 +35,6 @@ export default function Home() {
     "#5DADE2",
     "#AF7AC5",
     "#F39C12",
-    "#52BE80",
     "#8CBEB2",
     "#F4D03F",
   ];
