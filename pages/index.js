@@ -351,21 +351,19 @@ export default function Home() {
         {expandEducation && (
           <div className="animate__animated animate__zoomIn">
             <div className={classes.item}>
-              <div className={classes.rowEnglish}>
+              <div>
                 <Image width={40} height={40} src={ga} alt="lab" priority />
                 <h3>General Assembly Melbourne Australia</h3>
               </div>
               {!language ? (
-                <p className={classes.rowEnglish}>مهندس نرم افزار همه جانبه</p>
+                <p>مهندس نرم افزار همه جانبه</p>
               ) : (
-                <p className={classes.rowEnglish}>
-                  Software Engineering Immersive
-                </p>
+                <p>Software Engineering Immersive</p>
               )}
-              <p className={classes.rowEnglish}>2019</p>
+              <p>2019</p>
             </div>
             <div className={classes.item}>
-              <div className={classes.rowEnglish}>
+              <div>
                 <Image
                   width={40}
                   height={40}
@@ -375,27 +373,33 @@ export default function Home() {
                 />
                 <h3>The University of Newcastle Australia</h3>
               </div>
-              {!language ? (
-                <p className={classes.rowEnglish}>ارشد معماری</p>
-              ) : (
-                <p className={classes.rowEnglish}>Master of Architecture</p>
-              )}
-              <p className={classes.rowEnglish}>2011</p>
+              {!language ? <p>ارشد معماری</p> : <p>Master of Architecture</p>}
+              <p>2011</p>
             </div>
             <div className={classes.item}>
-              <div className={classes.rowEnglish}>
+              <div>
                 <Image width={40} height={40} src={deakin} alt="lab" priority />
                 <h3>Deakin University Melbourne Australia</h3>
               </div>
-              {!language ? (
-                <p className={classes.rowEnglish}>کارشناس طراحی</p>
-              ) : (
-                <p className={classes.rowEnglish}>Bachelor of Design</p>
-              )}
-              <p className={classes.rowEnglish}>2009</p>
+              {!language ? <p>کارشناس طراحی</p> : <p>Bachelor of Design</p>}
+              <p>2009</p>
             </div>
           </div>
         )}
+      </div>
+      <div className={classes.button}>
+        <button
+          onClick={() =>
+            window.open(
+              !language
+                ? "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link"
+                : "https://docs.google.com/forms/d/e/1FAIpQLSfpCOHJ0Y0myLiaVxvHBjypDKYeA8eE-YsrtBctyzvLJ07ZaA/viewform?usp=sf_link",
+              "_self"
+            )
+          }
+        >
+          {!language ? "درخواست مشاوره" : "Consultation"}
+        </button>
       </div>
       <div className={classes.description}>
         {!language ? (
@@ -412,20 +416,6 @@ export default function Home() {
             through the creative process”
           </h3>
         )}
-      </div>
-      <div className={classes.button}>
-        <button
-          onClick={() =>
-            window.open(
-              !language
-                ? "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link"
-                : "https://docs.google.com/forms/d/e/1FAIpQLSfpCOHJ0Y0myLiaVxvHBjypDKYeA8eE-YsrtBctyzvLJ07ZaA/viewform?usp=sf_link",
-              "_self"
-            )
-          }
-        >
-          {!language ? "درخواست مشاوره" : "Consultation"}
-        </button>
       </div>
       <div
         className={classes.imageBottom}
