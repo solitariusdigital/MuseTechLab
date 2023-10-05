@@ -55,7 +55,6 @@
     padding: 12px;
     color: config.$white;
     border: 1px solid config.$white;
-    box-shadow: config.$card-shadow;
     @include mixins.border-radius();
 
     h3 {
@@ -147,7 +146,6 @@
   margin-bottom: 100px;
   color: config.$white;
   border: 1px solid config.$white;
-  // box-shadow: config.$card-shadow;
   @include mixins.border-radius();
 
   .rowTitle,
