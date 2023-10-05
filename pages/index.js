@@ -114,7 +114,7 @@ export default function Home() {
             )
           }
         >
-          {!language ? "درخواست مشاوره" : "Request Consultation"}
+          {!language ? "درخواست مشاوره" : "Consultation"}
         </button>
       </div>
       <div className={classes.description}>
@@ -248,10 +248,10 @@ export default function Home() {
               )}
               {!language ? (
                 <p>
-                  براساس مشخصه‌های محصول و نیازمندی‌هایی که در مراحل قبل کدنویسی
-                  میشود. فرانت اند و بک اند توسعه داده میشود و کدها بازبینی و
-                  آزمایش میشوند. سپس محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی
-                  محصول با نیازها مورد آزمایش قرار میگیرد
+                  براساس مشخصه‌های محصول و نیازمندی‌ها در مراحل قبل، فرانت اند و
+                  بک اند توسعه داده میشود و کدها بازبینی و آزمایش میشوند. سپس
+                  محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی محصول با نیازها
+                  مورد آزمایش قرار میگیرد
                 </p>
               ) : (
                 <p className={classes.rowEnglish}>
@@ -339,7 +339,7 @@ export default function Home() {
             </Fragment>
           ) : (
             <Fragment>
-              {expandProcess ? (
+              {expandEducation ? (
                 <ExpandLessIcon sx={{ fontSize: 30 }} />
               ) : (
                 <ExpandMoreIcon sx={{ fontSize: 30 }} />
@@ -408,7 +408,7 @@ export default function Home() {
             )
           }
         >
-          {!language ? "درخواست مشاوره" : "Request Consultation"}
+          {!language ? "درخواست مشاوره" : "Consultation"}
         </button>
       </div>
       <div className={classes.description}>
