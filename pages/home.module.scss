@@ -73,6 +73,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
   width: config.$content-width;
 
   .canvas {
@@ -92,26 +93,13 @@
   }
 }
 
-.imageHero,
-.imageBottom {
+.imageHero {
   position: relative;
   height: 600px;
   width: 600px;
 
   @include mixins.mobile {
     width: 100%;
-  }
-}
-
-.imageBottom {
-  height: 200px;
-  width: 200px;
-  margin-top: 100px;
-
-  @include mixins.desktop {
-    &:hover {
-      cursor: pointer;
-    }
   }
 }
 

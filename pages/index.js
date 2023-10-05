@@ -16,9 +16,9 @@ import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturi
 import ScatterPlotIcon from "@mui/icons-material/ScatterPlot";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import logo from "@/assets/lab.png";
-import MuseTechLab from "@/assets/MuseTechLab.svg";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import Pyramid from "@/components/Pyramid";
 
 const Canvas = dynamic(() => import("../components/Canvas"), {
   ssr: false,
@@ -55,11 +55,7 @@ export default function Home() {
       <div className={classes.menu}>
         <Menu />
       </div>
-      <div className={classes.canvasContainer}>
-        <div className={classes.canvas}>
-          <Canvas />
-        </div>
-      </div>
+      <Pyramid />
       <div className={classes.header}>
         <h2 className={classes.english}>
           <span style={{ color: colorOne }} className={classes.english}>
@@ -418,31 +414,17 @@ export default function Home() {
           </h3>
         ) : (
           <h3>
-            “A muse supposedly provides a source of inspiration for an artist,
-            but that source can come in so many different forms, whether that’s
+            “Muse supposedly provides a source of inspiration for an artist, but
+            that source can come in so many different forms, whether that’s
             posing as an artist’s model or just offering advice and support
             through the creative process”
           </h3>
         )}
       </div>
-      <div
-        className={classes.imageBottom}
-        onClick={() =>
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          })
-        }
-      >
-        <Image
-          className={classes.image}
-          layout="fill"
-          objectFit="contain"
-          src={logo}
-          alt="lab"
-          priority
-        />
+      <div className={classes.canvasContainer}>
+        <div className={classes.canvas}>
+          <Canvas />
+        </div>
       </div>
       <div className={classes.header}>
         <h2 className={classes.english}>

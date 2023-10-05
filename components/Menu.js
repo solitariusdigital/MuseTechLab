@@ -23,8 +23,8 @@ export default function Menu() {
         <div className={classes.row} onClick={() => setLanguage(!language)}>
           <p>{!language ? "English" : "فارسی"}</p>
           <Image
-            width={80}
-            height={70}
+            width={70}
+            height={60}
             src={logo}
             alt="logo"
             onClick={() => Router.push("/")}
