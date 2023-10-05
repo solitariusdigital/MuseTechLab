@@ -397,6 +397,22 @@ export default function Home() {
           </div>
         )}
       </div>
+      <div className={classes.description}>
+        {!language ? (
+          <h3>
+            میوز منبع الهام یک هنرمند است، اما این منبع می‌تواند به اشکال مختلف
+            آشکار شود، چه اینطور باشد خود را به عنوان الگوی یک هنرمند یا فقط
+            ارائه مشاوره و پشتیبانی از طریق فرآیندی خلاق
+          </h3>
+        ) : (
+          <h3>
+            “A muse supposedly provides a source of inspiration for an artist,
+            but that source can come in so many different forms, whether that’s
+            posing as an artist’s model or just offering advice and support
+            through the creative process”
+          </h3>
+        )}
+      </div>
       <div className={classes.button}>
         <button
           onClick={() =>
@@ -410,22 +426,6 @@ export default function Home() {
         >
           {!language ? "درخواست مشاوره" : "Consultation"}
         </button>
-      </div>
-      <div className={classes.description}>
-        {!language ? (
-          <h3>
-            میوز منبع الهام یک هنرمند است، اما این منبع می‌تواند به اشکال مختلف
-            بیاید، چه اینطور باشد خود را به عنوان الگوی یک هنرمند یا فقط ارائه
-            مشاوره و پشتیبانی از طریق فرآیندی خلاق
-          </h3>
-        ) : (
-          <h3>
-            “A muse supposedly provides a source of inspiration for an artist,
-            but that source can come in so many different forms, whether that’s
-            posing as an artist’s model or just offering advice and support
-            through the creative process”
-          </h3>
-        )}
       </div>
       <div
         className={classes.imageBottom}
