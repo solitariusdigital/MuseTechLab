@@ -16,16 +16,15 @@ export default function Canvas() {
     y: 50,
   });
   const initialCircles = [
-    { fill: "#AF7AC5" },
-    { fill: "#E74C3C" },
+    { fill: "#F06060" },
     { fill: "#5DADE2" },
+    { fill: "#AF7AC5" },
+    { fill: "#F39C12" },
     { fill: "#52BE80" },
     { fill: "#8CBEB2" },
-    { fill: "#60f0f0" },
-    { fill: "#F06060" },
     { fill: "#F4D03F" },
-    { fill: "#F39C12" },
   ];
+
   const [circles, setCircles] = useState(initialCircles);
   const rectRef = useRef();
   const divRef = useRef(null);
@@ -60,7 +59,7 @@ export default function Canvas() {
   };
 
   const moveCircles = () => {
-    let amplitude = Math.floor(Math.random() * 1500 + 200);
+    let amplitude = Math.floor(Math.random() * 500 + 200);
     let period = 1500;
     const anim = new Konva.Animation((frame) => {
       rectRef.current.x(amplitude * Math.sin((frame.time * 2) / period));

@@ -32,15 +32,13 @@ export default function Home() {
   const [expandEducation, setExpandEducation] = useState(false);
 
   const colors = [
-    "#AF7AC5",
-    "#E74C3C",
+    "#F06060",
     "#5DADE2",
+    "#AF7AC5",
+    "#F39C12",
     "#52BE80",
     "#8CBEB2",
-    "#60f0f0",
-    "#F06060",
     "#F4D03F",
-    "#F39C12",
   ];
 
   useEffect(() => {
@@ -64,14 +62,14 @@ export default function Home() {
       </div>
       <div className={classes.header}>
         <h2 className={classes.english}>
-          Muse
           <span style={{ color: colorOne }} className={classes.english}>
-            TechLab
+            MuseTech
           </span>
+          <span className={classes.labText}>Lab</span>
         </h2>
         {!language && (
           <h2>
-            لابراتوار فناوری <span style={{ color: colorTwo }}>میوز</span>
+            لابراتوار <span style={{ color: colorTwo }}>فناوری میوز</span>
           </h2>
         )}
       </div>
@@ -446,20 +444,19 @@ export default function Home() {
           priority
         />
       </div>
-      <Image
-        width={220}
-        height={220}
-        src={MuseTechLab}
-        alt="logo"
-        onClick={() =>
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          })
-        }
-        priority
-      />
+      <div className={classes.header}>
+        <h2 className={classes.english}>
+          <span style={{ color: colorOne }} className={classes.english}>
+            MuseTech
+          </span>
+          <span className={classes.labText}>Lab</span>
+        </h2>
+        {!language && (
+          <h2>
+            لابراتوار <span style={{ color: colorTwo }}>فناوری میوز</span>
+          </h2>
+        )}
+      </div>
       <div className={classes.footer}>
         <div
           className={classes.row}

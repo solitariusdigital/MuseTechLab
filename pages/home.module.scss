@@ -13,15 +13,20 @@
   width: 100%;
 }
 
-.english {
-  font-family: config.$font-english !important;
-}
-
 .header {
   color: config.$white;
   margin-top: 100px;
   margin-bottom: 50px;
   text-align: center;
+
+  .english {
+    font-family: config.$font-english !important;
+  }
+
+  .labText {
+    font-family: config.$font-english !important;
+    font-size: config.$small-font;
+  }
 }
 
 .bannerContainer {
@@ -217,7 +222,7 @@
     flex-direction: column;
     height: 150px;
     width: calc(100% - 24px);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .row {
