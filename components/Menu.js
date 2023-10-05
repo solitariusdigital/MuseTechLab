@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { StateContext } from "@/context/stateContext";
 import Router from "next/router";
 import classes from "./Menu.module.scss";
