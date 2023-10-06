@@ -115,8 +115,8 @@ export default function Home() {
             هدف ما از توسعه نرم افزار انتقال ایده ها و طرح ها به راه حل های عملی
             و حل مشکلات است. مهارت های برنامه نویسی ما این فرصت را برای شما
             فراهم می کند تا طرح های مینیمال و در عین حال نوآورانه، خلاق تر و
-            سازنده تر باشند. توجه به جزییات و توسعه پلتفورم مینیمال، مدرن و سریع
-            مطابق با استانداردهای جهانی تنها شروع کار است
+            سازنده تر باشند. توجه به جزییات و توسعه پلتفورم مدرن و سریع مطابق با
+            استانداردهای جهانی تنها شروع کار است
           </h3>
         ) : (
           <h3>
@@ -124,8 +124,8 @@ export default function Home() {
             practical solutions and solve problems. Our programming skills
             provide you with the opportunity to have minimal and innovative
             designs, yet creative and productive. Paying attention to details
-            and developing a minimal, modern and fast platform according to
-            global standards is just the beginning
+            and developing a modern and fast platform according to global
+            standards is just the beginning
           </h3>
         )}
       </div>
