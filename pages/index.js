@@ -181,7 +181,6 @@ export default function Home() {
               )}
               {!language ? (
                 <p>
-                  برای توسعه نرم‌افزار طوفان فکری درمورد فرایند صورت می‌گیرد.
                   کارکردها و خدمات نرم‌افزار شناسایی میشود تا راه حل هایی ضروری
                   و مفید برای مخاطب و مشتریان شناسایی شود. برای دستیابی به محصول
                   باکیفیت، جزییات هر بخش از کار، طرح نهایی و پارامترها بررسی
@@ -189,7 +188,6 @@ export default function Home() {
                 </p>
               ) : (
                 <p className={classes.rowEnglish}>
-                  For software development, a brainstorming process takes place.
                   Software functions and services are identified to spot
                   necessary and useful solutions for the audience and customers.
                   To achieve a high-quality product, the details of each part of
@@ -211,18 +209,17 @@ export default function Home() {
               )}
               {!language ? (
                 <p>
-                  مشخصه‌های فنی تخصصی مورد نیاز برای خلق نرم‌افزار ترسیم میشود.
-                  عواملی مانند فناوری‌های قابل‌ استفاده، زمان، بودجه،
-                  محدودیت‌های پروژه، روش و طراحی معماری شناسایی میشود. معماری
-                  طراحی، اجزا، ارتباطات، فرانت اند و جریان کاربر مشخص میشود
+                  مشخصه‌های فنی مورد نیاز برای خلق نرم‌افزار ترسیم میشود. عواملی
+                  مانند فناوری‌های قابل‌ استفاده، زمان، بودجه، محدودیت‌های
+                  پروژه، معماری طراحی، اجزا، ارتباطات، فرانت اند و جریان کاربر
+                  مشخص میشود
                 </p>
               ) : (
                 <p className={classes.rowEnglish}>
                   The technical characteristics needed to create the software
                   are drawn. Factors such as applicable technologies, time,
-                  budget, limitations and architectural design are identified.
-                  Design architecture, components, communications, front end and
-                  user flow are specified
+                  budget, limitations, design, architecture, components,
+                  communications, front end and user flow are specified
                 </p>
               )}
             </div>
@@ -248,10 +245,9 @@ export default function Home() {
               ) : (
                 <p className={classes.rowEnglish}>
                   Based on the product characteristics and requirements in the
-                  previous stages of design, Front-end and back-end are
-                  developed and codes are reviewed and tested. Then the product
-                  reaches the stage of implementation and coordination with
-                  requirements
+                  previous stages of design, frontend and backend are developed
+                  and codes are reviewed and tested. Then the product reaches
+                  the stage of implementation and coordination with requirements
                 </p>
               )}
             </div>
@@ -269,16 +265,15 @@ export default function Home() {
               )}
               {!language ? (
                 <p>
-                  در مرحله‌ آزمایش محصول از لحاظ داشتن باگ آزموده می‌شود و
-                  عملکرد آن پیش از تحویل به کاربر بازبینی میشود تا زمانی که
-                  نرم‌افزار بدون وجود باگ کار کند و مطابق با نیازها باشد
+                  محصول از لحاظ داشتن باگ آزموده می‌شود و عملکرد آن پیش از تحویل
+                  به کاربر بازبینی میشود تا زمانی که نرم‌افزار بدون وجود باگ کار
+                  کند و مطابق با نیازها باشد
                 </p>
               ) : (
                 <p className={classes.rowEnglish}>
-                  In the testing stage, the product is tested for bugs and
-                  performance. It is reviewed before delivery to the end-user
-                  until the software works without bugs and satisfies all
-                  requirements
+                  The product is tested for bugs and performance. It is reviewed
+                  before delivery to the user until the software works without
+                  bugs and satisfies all requirements
                 </p>
               )}
             </div>
