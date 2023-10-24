@@ -29,7 +29,8 @@
   }
 }
 
-.bannerContainer {
+.bannerContainer,
+.bannerServices {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   gap: 12px;
@@ -65,6 +66,26 @@
     h3 {
       margin-top: 12px;
     }
+  }
+}
+
+.bannerServices {
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+
+  @include mixins.tablet {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    width: 100%;
+    padding: 0px 12px;
+  }
+
+  @include mixins.mobile {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    width: 100%;
+    padding: 0px 12px;
+  }
+
+  .banner {
+    height: 100%;
   }
 }
 

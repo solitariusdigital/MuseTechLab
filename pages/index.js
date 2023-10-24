@@ -140,6 +140,39 @@ export default function Home() {
           priority
         />
       </div>
+      <div className={classes.header}>
+        <h2>{!language ? "خدمات نرم‌‌افزار" : "Software Services"}</h2>
+      </div>
+      <div className={classes.bannerServices}>
+        <div className={classes.banner}>
+          {!language ? (
+            <h3>سایت شخصی حرفه‌ای </h3>
+          ) : (
+            <h3>Professional personal site</h3>
+          )}
+          {!language ? (
+            <h3>سایت شرکتی حرفه‌ای </h3>
+          ) : (
+            <h3>Professional corporate site</h3>
+          )}
+        </div>
+        <div className={classes.banner}>
+          {!language ? <h3>فروشگاه اینترنتی</h3> : <h3>Online shop</h3>}
+          {!language ? <h3>سایت پزشکی</h3> : <h3>Medical site</h3>}
+        </div>
+        <div className={classes.banner}>
+          {!language ? (
+            <h3>سایت نوبت دهی برای کسب و کار</h3>
+          ) : (
+            <h3>Appointment site for business</h3>
+          )}
+          {!language ? (
+            <h3>نرم افزار تحت وب / ​وب اپلیکیشن</h3>
+          ) : (
+            <h3>Software / Web application</h3>
+          )}
+        </div>
+      </div>
       <div className={classes.infomration}>
         <div
           className={classes.rowTitle}
