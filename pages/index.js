@@ -81,7 +81,7 @@ export default function Home() {
         <div className={classes.banner}>
           <PrecisionManufacturingIcon sx={{ fontSize: 45, color: "#AF7AC5" }} />
           {!language ? (
-            <h3>توسعه نرم افزار، وب اپلیکیشن، وب سایت</h3>
+            <h3>توسعه نرم‌‌افزار، وب اپلیکیشن، وب سایت</h3>
           ) : (
             <h3>Software development, Web application, Website</h3>
           )}
