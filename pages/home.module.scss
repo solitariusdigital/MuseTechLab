@@ -70,6 +70,7 @@
 .bannerServices {
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   margin: auto;
+  margin-bottom: 100px;
 
   @include mixins.tablet {
     grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));

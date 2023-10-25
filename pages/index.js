@@ -130,6 +130,16 @@ export default function Home() {
         )}
       </div>
       <div className={classes.spinner}></div>
+      <div className={classes.imageHero}>
+        <Image
+          className={classes.image}
+          layout="fill"
+          objectFit="contain"
+          src={techlab}
+          alt="lab"
+          priority
+        />
+      </div>
       <div className={classes.header}>
         <h2>{!language ? "خدمات نرم‌‌افزار" : "Software Services"}</h2>
       </div>
@@ -162,16 +172,6 @@ export default function Home() {
             <h3>Software / Web application</h3>
           )}
         </div>
-      </div>
-      <div className={classes.imageHero}>
-        <Image
-          className={classes.image}
-          layout="fill"
-          objectFit="contain"
-          src={techlab}
-          alt="lab"
-          priority
-        />
       </div>
       <div className={classes.infomrationContainer}>
         <div className={classes.infomration}>
