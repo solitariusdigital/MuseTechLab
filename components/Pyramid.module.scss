@@ -39,22 +39,22 @@
 
 .pyramidLoader .wrapper .side1 {
   transform: rotateZ(-30deg) rotateY(90deg);
-  background: conic-gradient(#5dade2, #af7ac5, #f06060, #f39c12);
+  background: conic-gradient(#af7ac5, #5dade2, #f06060, #f39c12);
 }
 
 .pyramidLoader .wrapper .side2 {
   transform: rotateZ(30deg) rotateY(90deg);
-  background: conic-gradient(#f39c12, #f06060, #af7ac5, #5dade2);
+  background: conic-gradient(#f39c12, #f06060, #5dade2, #af7ac5);
 }
 
 .pyramidLoader .wrapper .side3 {
   transform: rotateX(30deg);
-  background: conic-gradient(#f39c12, #f06060, #af7ac5, #5dade2);
+  background: conic-gradient(#f39c12, #f06060, #5dade2, #af7ac5);
 }
 
 .pyramidLoader .wrapper .side4 {
   transform: rotateX(-30deg);
-  background: conic-gradient(#5dade2, #af7ac5, #f06060, #f39c12);
+  background: conic-gradient(#af7ac5, #5dade2, #f06060, #f39c12);
 }
 
 .pyramidLoader .wrapper .shadow {
