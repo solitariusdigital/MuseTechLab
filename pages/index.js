@@ -53,7 +53,9 @@ export default function Home() {
       <div className={classes.menu}>
         <Menu />
       </div>
-      <Pyramid />
+      <div className={classes.pyramid}>
+        <Pyramid />
+      </div>
       <div className={classes.header}>
         <h2 className={classes.english}>
           <span style={{ color: colorOne }} className={classes.english}>
@@ -173,263 +175,261 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className={classes.infomration}>
-        <div
-          className={classes.rowTitle}
-          onClick={() => setExpandProcess(!expandProcess)}
-        >
-          {!language ? (
-            <Fragment>
-              <h3>فرایند توسعه نرم‌‌افزار</h3>
-              {expandProcess ? (
-                <ExpandLessIcon sx={{ fontSize: 30 }} />
-              ) : (
-                <ExpandMoreIcon sx={{ fontSize: 30 }} />
-              )}
-            </Fragment>
-          ) : (
-            <Fragment>
-              {expandProcess ? (
-                <ExpandLessIcon sx={{ fontSize: 30 }} />
-              ) : (
-                <ExpandMoreIcon sx={{ fontSize: 30 }} />
-              )}
-              <h3>Software development process</h3>
-            </Fragment>
-          )}
-        </div>
-        {expandProcess && (
-          <div className="animate__animated animate__zoomIn">
-            <div className={classes.item}>
-              {!language ? (
-                <div className={classes.row}>
-                  <ScienceIcon sx={{ color: "#F06060" }} />
-                  <h3>تحلیل نیازها</h3>
-                </div>
-              ) : (
-                <div className={classes.rowEnglish}>
-                  <ScienceIcon sx={{ color: "#F06060" }} />
-                  <h3>Requirements analysis</h3>
-                </div>
-              )}
-              {!language ? (
-                <p>
-                  کارکردها و خدمات نرم‌افزار شناسایی میشود تا راه حل هایی ضروری
-                  و مفید برای مخاطب و مشتریان شناسایی شود. برای دستیابی به محصول
-                  باکیفیت، جزییات هر بخش از کار، طرح نهایی و پارامترها بررسی
-                  میشود
-                </p>
-              ) : (
-                <p className={classes.rowEnglish}>
-                  Software functions and services are identified to spot
-                  necessary and useful solutions for the audience and customers.
-                  To achieve a high-quality product, the details of each part of
-                  the work, the final design and the parameters are evaluated
-                </p>
-              )}
-            </div>
-            <div className={classes.item}>
-              {!language ? (
-                <div className={classes.row}>
-                  <BrushIcon sx={{ color: "#5DADE2" }} />
-                  <h3>توسعه طراحی</h3>
-                </div>
-              ) : (
-                <div className={classes.rowEnglish}>
-                  <BrushIcon sx={{ color: "#5DADE2" }} />
-                  <h3>Design development</h3>
-                </div>
-              )}
-              {!language ? (
-                <p>
-                  مشخصه‌های فنی مورد نیاز برای خلق نرم‌افزار ترسیم میشود. عواملی
-                  مانند فناوری‌های قابل‌ استفاده، زمان، بودجه، محدودیت‌های
-                  پروژه، معماری طراحی، اجزا، ارتباطات، فرانت اند و جریان کاربر
-                  مشخص میشود
-                </p>
-              ) : (
-                <p className={classes.rowEnglish}>
-                  The technical characteristics needed to create the software
-                  are drawn. Factors such as applicable technologies, time,
-                  budget, limitations, design, architecture, components,
-                  communications, front end and user flow are specified
-                </p>
-              )}
-            </div>
-            <div className={classes.item}>
-              {!language ? (
-                <div className={classes.row}>
-                  <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-                  <h3>توسعه و پیاده‌سازی</h3>
-                </div>
-              ) : (
-                <div className={classes.rowEnglish}>
-                  <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-                  <h3>Development & implementation</h3>
-                </div>
-              )}
-              {!language ? (
-                <p>
-                  براساس مشخصه‌های محصول و نیازمندی‌ها در مراحل قبل، فرانت اند و
-                  بک اند توسعه داده میشود و کدها بازبینی و آزمایش میشوند. سپس
-                  محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی محصول با نیازها
-                  مورد آزمایش قرار میگیرد
-                </p>
-              ) : (
-                <p className={classes.rowEnglish}>
-                  Based on the product characteristics and requirements in the
-                  previous stages of design, frontend and backend are developed
-                  and codes are reviewed and tested. Then the product reaches
-                  the stage of implementation and coordination with requirements
-                </p>
-              )}
-            </div>
-            <div className={classes.item}>
-              {!language ? (
-                <div className={classes.row}>
-                  <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-                  <h3>آزمایش</h3>
-                </div>
-              ) : (
-                <div className={classes.rowEnglish}>
-                  <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
-                  <h3>Testing</h3>
-                </div>
-              )}
-              {!language ? (
-                <p>
-                  محصول از لحاظ داشتن باگ آزموده می‌شود و عملکرد آن پیش از تحویل
-                  به کاربر بازبینی میشود تا زمانی که نرم‌افزار بدون وجود باگ کار
-                  کند و مطابق با نیازها باشد
-                </p>
-              ) : (
-                <p className={classes.rowEnglish}>
-                  The product is tested for bugs and performance. It is reviewed
-                  before delivery to the user until the software works without
-                  bugs and satisfies all requirements
-                </p>
-              )}
-            </div>
-            <div className={classes.item}>
-              {!language ? (
-                <div className={classes.row}>
-                  <ScatterPlotIcon sx={{ color: "#F39C12" }} />
-                  <h3>استقرار و پشتیبانی</h3>
-                </div>
-              ) : (
-                <div className={classes.rowEnglish}>
-                  <ScatterPlotIcon sx={{ color: "#F39C12" }} />
-                  <h3>Deployment & support</h3>
-                </div>
-              )}
+      <div className={classes.infomrationContainer}>
+        <div className={classes.infomration}>
+          <div
+            className={classes.rowTitle}
+            onClick={() => setExpandProcess(!expandProcess)}
+          >
+            {!language ? (
+              <Fragment>
+                <h3>فرایند توسعه نرم‌‌افزار</h3>
+                {expandProcess ? (
+                  <ExpandLessIcon sx={{ fontSize: 30 }} />
+                ) : (
+                  <ExpandMoreIcon sx={{ fontSize: 30 }} />
+                )}
+              </Fragment>
+            ) : (
+              <Fragment>
+                {expandProcess ? (
+                  <ExpandLessIcon sx={{ fontSize: 30 }} />
+                ) : (
+                  <ExpandMoreIcon sx={{ fontSize: 30 }} />
+                )}
+                <h3>Software development process</h3>
+              </Fragment>
+            )}
+          </div>
+          {expandProcess && (
+            <div className="animate__animated animate__zoomIn">
+              <div className={classes.item}>
+                {!language ? (
+                  <div className={classes.row}>
+                    <ScienceIcon sx={{ color: "#F06060" }} />
+                    <h3>تحلیل نیازها</h3>
+                  </div>
+                ) : (
+                  <div className={classes.rowEnglish}>
+                    <ScienceIcon sx={{ color: "#F06060" }} />
+                    <h3>Requirements analysis</h3>
+                  </div>
+                )}
+                {!language ? (
+                  <p>
+                    کارکردها و خدمات نرم‌افزار شناسایی میشود تا راه حل هایی
+                    ضروری و مفید برای مخاطب و مشتریان شناسایی شود. برای دستیابی
+                    به محصول باکیفیت، جزییات هر بخش از کار، طرح نهایی و
+                    پارامترها بررسی میشود
+                  </p>
+                ) : (
+                  <p className={classes.rowEnglish}>
+                    Software functions and services are identified to spot
+                    necessary and useful solutions for the audience and
+                    customers. To achieve a high-quality product, the details of
+                    each part of the work, the final design and the parameters
+                    are evaluated
+                  </p>
+                )}
+              </div>
+              <div className={classes.item}>
+                {!language ? (
+                  <div className={classes.row}>
+                    <BrushIcon sx={{ color: "#5DADE2" }} />
+                    <h3>توسعه طراحی</h3>
+                  </div>
+                ) : (
+                  <div className={classes.rowEnglish}>
+                    <BrushIcon sx={{ color: "#5DADE2" }} />
+                    <h3>Design development</h3>
+                  </div>
+                )}
+                {!language ? (
+                  <p>
+                    مشخصه‌های فنی مورد نیاز برای خلق نرم‌افزار ترسیم میشود.
+                    عواملی مانند فناوری‌های قابل‌ استفاده، زمان، بودجه،
+                    محدودیت‌های پروژه، معماری طراحی، اجزا، ارتباطات، فرانت اند و
+                    جریان کاربر مشخص میشود
+                  </p>
+                ) : (
+                  <p className={classes.rowEnglish}>
+                    The technical characteristics needed to create the software
+                    are drawn. Factors such as applicable technologies, time,
+                    budget, limitations, design, architecture, components,
+                    communications, front end and user flow are specified
+                  </p>
+                )}
+              </div>
+              <div className={classes.item}>
+                {!language ? (
+                  <div className={classes.row}>
+                    <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                    <h3>توسعه و پیاده‌سازی</h3>
+                  </div>
+                ) : (
+                  <div className={classes.rowEnglish}>
+                    <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                    <h3>Development & implementation</h3>
+                  </div>
+                )}
+                {!language ? (
+                  <p>
+                    براساس مشخصه‌های محصول و نیازمندی‌ها در مراحل قبل، فرانت اند
+                    و بک اند توسعه داده میشود و کدها بازبینی و آزمایش میشوند.
+                    سپس محصول به مرحله‌ پیاده‌سازی می‌رسد و هماهنگی محصول با
+                    نیازها مورد آزمایش قرار میگیرد
+                  </p>
+                ) : (
+                  <p className={classes.rowEnglish}>
+                    Based on the product characteristics and requirements in the
+                    previous stages of design, frontend and backend are
+                    developed and codes are reviewed and tested. Then the
+                    product reaches the stage of implementation and coordination
+                    with requirements
+                  </p>
+                )}
+              </div>
+              <div className={classes.item}>
+                {!language ? (
+                  <div className={classes.row}>
+                    <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                    <h3>آزمایش</h3>
+                  </div>
+                ) : (
+                  <div className={classes.rowEnglish}>
+                    <PrecisionManufacturingIcon sx={{ color: "#AF7AC5" }} />
+                    <h3>Testing</h3>
+                  </div>
+                )}
+                {!language ? (
+                  <p>
+                    محصول از لحاظ داشتن باگ آزموده می‌شود و عملکرد آن پیش از
+                    تحویل به کاربر بازبینی میشود تا زمانی که نرم‌افزار بدون وجود
+                    باگ کار کند و مطابق با نیازها باشد
+                  </p>
+                ) : (
+                  <p className={classes.rowEnglish}>
+                    The product is tested for bugs and performance. It is
+                    reviewed before delivery to the user until the software
+                    works without bugs and satisfies all requirements
+                  </p>
+                )}
+              </div>
+              <div className={classes.item}>
+                {!language ? (
+                  <div className={classes.row}>
+                    <ScatterPlotIcon sx={{ color: "#F39C12" }} />
+                    <h3>استقرار و پشتیبانی</h3>
+                  </div>
+                ) : (
+                  <div className={classes.rowEnglish}>
+                    <ScatterPlotIcon sx={{ color: "#F39C12" }} />
+                    <h3>Deployment & support</h3>
+                  </div>
+                )}
 
-              {!language ? (
-                <p>
-                  هنگامی که نرم‌افزار هیچ نقصی نداشته باشد به مشتری ارائه داده
-                  میشود. پس از ارائه‌ نسخه‌ تولیدی نرم‌افزار، مشکلات کاربر هنگام
-                  کار با محصول مدیریت میشود. درصورتی‌ که نرم‌افزار با مشکل
-                  روبه‌رو شود آپدیت انجام میگیرد
-                </p>
-              ) : (
-                <p className={classes.rowEnglish}>
-                  When the software does not have any defects, it will be
-                  provided to the customer. After providing the production
-                  version of the software, user's problems with the product are
-                  managed. If the software is facing a problem update will be
-                  completed
-                </p>
-              )}
+                {!language ? (
+                  <p>
+                    هنگامی که نرم‌افزار هیچ نقصی نداشته باشد به مشتری ارائه داده
+                    میشود. پس از ارائه‌ نسخه‌ تولیدی نرم‌افزار، مشکلات کاربر
+                    هنگام کار با محصول مدیریت میشود. درصورتی‌ که نرم‌افزار با
+                    مشکل روبه‌رو شود آپدیت انجام میگیرد
+                  </p>
+                ) : (
+                  <p className={classes.rowEnglish}>
+                    When the software does not have any defects, it will be
+                    provided to the customer. After providing the production
+                    version of the software, user's problems with the product
+                    are managed. If the software is facing a problem update will
+                    be completed
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-      <div className={classes.infomration}>
-        <div
-          className={classes.rowTitle}
-          onClick={() => setExpandEducation(!expandEducation)}
-        >
-          {!language ? (
-            <Fragment>
-              <h3>تحصیلات</h3>
-              {expandEducation ? (
-                <ExpandLessIcon sx={{ fontSize: 30 }} />
-              ) : (
-                <ExpandMoreIcon sx={{ fontSize: 30 }} />
-              )}
-            </Fragment>
-          ) : (
-            <Fragment>
-              {expandEducation ? (
-                <ExpandLessIcon sx={{ fontSize: 30 }} />
-              ) : (
-                <ExpandMoreIcon sx={{ fontSize: 30 }} />
-              )}
-              <h3>Education</h3>
-            </Fragment>
           )}
         </div>
-        {expandEducation && (
-          <div className="animate__animated animate__zoomIn">
-            <div className={classes.item}>
-              <div className={classes.rowEnglish}>
-                <Image width={40} height={40} src={ga} alt="lab" priority />
-                <h3>General Assembly Melbourne Australia</h3>
-              </div>
-              {!language ? (
-                <p className={classes.rowEnglish}>مهندس نرم افزار همه جانبه</p>
-              ) : (
-                <p className={classes.rowEnglish}>
-                  Software Engineering Immersive
-                </p>
-              )}
-              <p className={classes.rowEnglish}>2019</p>
-            </div>
-            <div className={classes.item}>
-              <div className={classes.rowEnglish}>
-                <Image
-                  width={40}
-                  height={40}
-                  src={newcastle}
-                  alt="lab"
-                  priority
-                />
-                <h3>The University of Newcastle Australia</h3>
-              </div>
-              {!language ? (
-                <p className={classes.rowEnglish}>ارشد معماری</p>
-              ) : (
-                <p className={classes.rowEnglish}>Master of Architecture</p>
-              )}
-              <p className={classes.rowEnglish}>2011</p>
-            </div>
-            <div className={classes.item}>
-              <div className={classes.rowEnglish}>
-                <Image width={40} height={40} src={deakin} alt="lab" priority />
-                <h3>Deakin University Melbourne Australia</h3>
-              </div>
-              {!language ? (
-                <p className={classes.rowEnglish}>کارشناس طراحی</p>
-              ) : (
-                <p className={classes.rowEnglish}>Bachelor of Design</p>
-              )}
-              <p className={classes.rowEnglish}>2009</p>
-            </div>
+        <div className={classes.infomration}>
+          <div
+            className={classes.rowTitle}
+            onClick={() => setExpandEducation(!expandEducation)}
+          >
+            {!language ? (
+              <Fragment>
+                <h3>تحصیلات</h3>
+                {expandEducation ? (
+                  <ExpandLessIcon sx={{ fontSize: 30 }} />
+                ) : (
+                  <ExpandMoreIcon sx={{ fontSize: 30 }} />
+                )}
+              </Fragment>
+            ) : (
+              <Fragment>
+                {expandEducation ? (
+                  <ExpandLessIcon sx={{ fontSize: 30 }} />
+                ) : (
+                  <ExpandMoreIcon sx={{ fontSize: 30 }} />
+                )}
+                <h3>Education</h3>
+              </Fragment>
+            )}
           </div>
-        )}
-      </div>
-      <div className={classes.button}>
-        <button
-          onClick={() =>
-            window.open(
-              !language
-                ? "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link"
-                : "https://docs.google.com/forms/d/e/1FAIpQLSfpCOHJ0Y0myLiaVxvHBjypDKYeA8eE-YsrtBctyzvLJ07ZaA/viewform?usp=sf_link",
-              "_self"
-            )
-          }
-        >
-          {!language ? "درخواست مشاوره" : "Consultation"}
-        </button>
+          {expandEducation && (
+            <div className="animate__animated animate__zoomIn">
+              <div className={classes.item}>
+                <div className={classes.rowEnglish}>
+                  <Image width={40} height={40} src={ga} alt="lab" priority />
+                  <h3>General Assembly Melbourne Australia</h3>
+                </div>
+                {!language ? (
+                  <p className={classes.rowEnglish}>
+                    مهندس نرم افزار همه جانبه
+                  </p>
+                ) : (
+                  <p className={classes.rowEnglish}>
+                    Software Engineering Immersive
+                  </p>
+                )}
+                <p className={classes.rowEnglish}>2019</p>
+              </div>
+              <div className={classes.item}>
+                <div className={classes.rowEnglish}>
+                  <Image
+                    width={40}
+                    height={40}
+                    src={newcastle}
+                    alt="lab"
+                    priority
+                  />
+                  <h3>The University of Newcastle Australia</h3>
+                </div>
+                {!language ? (
+                  <p className={classes.rowEnglish}>ارشد معماری</p>
+                ) : (
+                  <p className={classes.rowEnglish}>Master of Architecture</p>
+                )}
+                <p className={classes.rowEnglish}>2011</p>
+              </div>
+              <div className={classes.item}>
+                <div className={classes.rowEnglish}>
+                  <Image
+                    width={40}
+                    height={40}
+                    src={deakin}
+                    alt="lab"
+                    priority
+                  />
+                  <h3>Deakin University Melbourne Australia</h3>
+                </div>
+                {!language ? (
+                  <p className={classes.rowEnglish}>کارشناس طراحی</p>
+                ) : (
+                  <p className={classes.rowEnglish}>Bachelor of Design</p>
+                )}
+                <p className={classes.rowEnglish}>2009</p>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
       <div className={classes.description}>
         {!language ? (
@@ -447,12 +447,35 @@ export default function Home() {
           </h3>
         )}
       </div>
+      <div className={classes.button}>
+        <button
+          onClick={() =>
+            window.open(
+              !language
+                ? "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link"
+                : "https://docs.google.com/forms/d/e/1FAIpQLSfpCOHJ0Y0myLiaVxvHBjypDKYeA8eE-YsrtBctyzvLJ07ZaA/viewform?usp=sf_link",
+              "_self"
+            )
+          }
+        >
+          {!language ? "درخواست مشاوره" : "Consultation"}
+        </button>
+      </div>
       <div className={classes.canvasContainer}>
         <div className={classes.canvas}>
           <Canvas />
         </div>
       </div>
-      <div className={classes.header}>
+      <div
+        className={classes.header}
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          })
+        }
+      >
         <h2 className={classes.english}>
           <span style={{ color: colorOne }} className={classes.english}>
             MuseTech

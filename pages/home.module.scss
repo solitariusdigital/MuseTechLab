@@ -13,9 +13,12 @@
   width: 100%;
 }
 
+.pyramid {
+  margin-bottom: 100px;
+}
+
 .header {
   color: config.$white;
-  margin-top: 100px;
   margin-bottom: 50px;
   text-align: center;
 
@@ -35,7 +38,6 @@
   grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
   gap: 12px;
   margin: auto;
-  margin-bottom: 100px;
   direction: rtl;
   width: config.$content-width;
 
@@ -64,13 +66,14 @@
     @include mixins.border-radius();
 
     h3 {
-      margin-top: 12px;
+      margin: 6px 0px;
     }
   }
 }
 
 .bannerServices {
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  margin: auto;
 
   @include mixins.tablet {
     grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
@@ -94,7 +97,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-bottom: 100px;
   width: config.$content-width;
 
   .canvas {
@@ -126,7 +129,6 @@
 
 .description {
   color: config.$white;
-  margin-top: 100px;
   width: 600px;
   text-align: center;
   line-height: 40px;
@@ -154,65 +156,74 @@
   }
 }
 
-.infomration {
+.infomrationContainer {
+  display: flex;
+  flex-direction: column;
   width: 600px;
-  padding: 12px;
-  margin-bottom: 100px;
-  color: config.$white;
-  border: 1px solid config.$white;
-  @include mixins.border-radius();
-
-  .rowTitle,
-  .row {
-    display: flex;
-    direction: rtl;
-  }
-
-  .row {
-    margin-bottom: 8px;
-
-    h3 {
-      margin-right: 20px;
-    }
-  }
-
-  p {
-    text-align: right;
-  }
-
-  .rowEnglish {
-    display: flex;
-    margin-bottom: 8px;
-    align-items: center;
-    text-align: left;
-
-    h3 {
-      margin-left: 20px;
-    }
-  }
-
-  .rowTitle {
-    justify-content: space-between;
-    align-items: center;
-
-    @include mixins.desktop {
-      &:hover {
-        cursor: pointer;
-        color: config.$action;
-      }
-    }
-  }
+  margin: 100px 0px;
 
   @include mixins.mobile {
     width: calc(100% - 24px);
   }
 
-  .item {
-    margin: 20px 20px;
+  .infomration {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0px;
+    color: config.$white;
+    border: 1px solid config.$white;
+    @include mixins.border-radius();
+
+    .rowTitle,
+    .row {
+      display: flex;
+      direction: rtl;
+    }
+
+    .row {
+      margin-bottom: 8px;
+
+      h3 {
+        margin-right: 20px;
+      }
+    }
+
+    p {
+      text-align: right;
+    }
+
+    .rowEnglish {
+      display: flex;
+      margin-bottom: 8px;
+      align-items: center;
+      text-align: left;
+
+      h3 {
+        margin-left: 20px;
+      }
+    }
+
+    .rowTitle {
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      @include mixins.desktop {
+        &:hover {
+          color: config.$action;
+        }
+      }
+    }
+
+    .item {
+      margin: 20px 20px;
+    }
   }
 }
 
 .button {
+  margin: 100px 0px;
+
   button {
     @include mixins.heartbeat();
   }
