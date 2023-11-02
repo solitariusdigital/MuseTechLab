@@ -29,6 +29,7 @@ export default function Home() {
   const [colorTwo, setColorTwo] = useState("#F39C12");
   const [expandProcess, setExpandProcess] = useState(false);
   const [expandEducation, setExpandEducation] = useState(false);
+  const [selectedId, setSelectedId] = useState(null);
 
   const colors = [
     "#F06060",
@@ -47,6 +48,13 @@ export default function Home() {
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleClick = (id) => {
+    setSelectedId(id);
+    setTimeout(() => {
+      setSelectedId(null);
+    }, 3000);
+  };
 
   return (
     <div className={classes.main}>
@@ -129,7 +137,15 @@ export default function Home() {
           </h3>
         )}
       </div>
-      <div className={classes.spinner}></div>
+      <div
+        className={
+          selectedId === "element4"
+            ? `${classes.spinner} animate__animated animate__swing`
+            : classes.spinner
+        }
+        id="element4"
+        onClick={() => handleClick("element4")}
+      ></div>
       <div className={classes.imageHero}>
         <Image
           className={classes.image}
@@ -144,7 +160,15 @@ export default function Home() {
         <h2>{!language ? "خدمات نرم‌‌افزار" : "Software Services"}</h2>
       </div>
       <div className={classes.bannerServices}>
-        <div className={classes.banner}>
+        <div
+          className={
+            selectedId === "element1"
+              ? `${classes.banner} animate__animated animate__hinge`
+              : classes.banner
+          }
+          id="element1"
+          onClick={() => handleClick("element1")}
+        >
           {!language ? (
             <h3>سایت شخصی حرفه‌ای </h3>
           ) : (
@@ -156,11 +180,27 @@ export default function Home() {
             <h3>Professional corporate site</h3>
           )}
         </div>
-        <div className={classes.banner}>
+        <div
+          className={
+            selectedId === "element2"
+              ? `${classes.banner} animate__animated animate__rubberBand`
+              : classes.banner
+          }
+          id="element2"
+          onClick={() => handleClick("element2")}
+        >
           {!language ? <h3>فروشگاه اینترنتی</h3> : <h3>Online shop</h3>}
           {!language ? <h3>سایت پزشکی</h3> : <h3>Medical site</h3>}
         </div>
-        <div className={classes.banner}>
+        <div
+          className={
+            selectedId === "element3"
+              ? `${classes.banner} animate__animated animate__swing`
+              : classes.banner
+          }
+          id="element3"
+          onClick={() => handleClick("element3")}
+        >
           {!language ? (
             <h3>سایت نوبت دهی برای کسب و کار</h3>
           ) : (
