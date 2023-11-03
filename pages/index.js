@@ -53,7 +53,7 @@ export default function Home() {
     setSelectedId(id);
     setTimeout(() => {
       setSelectedId(null);
-    }, 3000);
+    }, 1000);
   };
 
   return (
@@ -137,15 +137,7 @@ export default function Home() {
           </h3>
         )}
       </div>
-      <div
-        className={
-          selectedId === "element4"
-            ? `${classes.spinner} animate__animated animate__swing`
-            : classes.spinner
-        }
-        id="element4"
-        onClick={() => handleClick("element4")}
-      ></div>
+      <div className={classes.spinner}></div>
       <div className={classes.imageHero}>
         <Image
           className={classes.image}
@@ -163,7 +155,7 @@ export default function Home() {
         <div
           className={
             selectedId === "element1"
-              ? `${classes.banner} animate__animated animate__hinge`
+              ? `${classes.banner} animate__animated animate__swing`
               : classes.banner
           }
           id="element1"
@@ -183,7 +175,7 @@ export default function Home() {
         <div
           className={
             selectedId === "element2"
-              ? `${classes.banner} animate__animated animate__rubberBand`
+              ? `${classes.banner} animate__animated animate__swing`
               : classes.banner
           }
           id="element2"
