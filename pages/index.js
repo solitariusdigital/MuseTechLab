@@ -61,7 +61,17 @@ export default function Home() {
       <div className={classes.menu}>
         <Menu />
       </div>
-      <Pyramid />
+      <div
+        className={
+          selectedId === "element8"
+            ? `${classes.banner} animate__animated animate__rubberBand`
+            : classes.banner
+        }
+        id="element8"
+        onClick={() => handleClick("element8")}
+      >
+        <Pyramid />
+      </div>
       <div className={classes.header}>
         <h2 className={classes.english}>
           <span style={{ color: colorOne }} className={classes.english}>
@@ -76,17 +86,41 @@ export default function Home() {
         )}
       </div>
       <div className={classes.bannerContainer}>
-        <div className={classes.banner}>
+        <div
+          className={
+            selectedId === "element1"
+              ? `${classes.banner} animate__animated animate__swing`
+              : classes.banner
+          }
+          id="element1"
+          onClick={() => handleClick("element1")}
+        >
           <ScienceIcon sx={{ fontSize: 45, color: "#F06060" }} />
           {!language && <h3>طراحی تجربه کاربری</h3>}
           <h3>User Experience Design</h3>
         </div>
-        <div className={classes.banner}>
+        <div
+          className={
+            selectedId === "element2"
+              ? `${classes.banner} animate__animated animate__swing`
+              : classes.banner
+          }
+          id="element2"
+          onClick={() => handleClick("element2")}
+        >
           <BrushIcon sx={{ fontSize: 45, color: "#5DADE2" }} />
           {!language && <h3>نمونه سازی رابط کاربری</h3>}
           <h3>User Interface Design</h3>
         </div>
-        <div className={classes.banner}>
+        <div
+          className={
+            selectedId === "element3"
+              ? `${classes.banner} animate__animated animate__swing`
+              : classes.banner
+          }
+          id="element3"
+          onClick={() => handleClick("element3")}
+        >
           <PrecisionManufacturingIcon sx={{ fontSize: 45, color: "#AF7AC5" }} />
           {!language ? (
             <h3>توسعه نرم‌‌افزار، وب اپلیکیشن، وب سایت</h3>
@@ -94,7 +128,15 @@ export default function Home() {
             <h3>Software development, Web application, Website</h3>
           )}
         </div>
-        <div className={classes.banner}>
+        <div
+          className={
+            selectedId === "element4"
+              ? `${classes.banner} animate__animated animate__swing`
+              : classes.banner
+          }
+          id="element4"
+          onClick={() => handleClick("element4")}
+        >
           <ScatterPlotIcon sx={{ fontSize: 45, color: "#F39C12" }} />
           {!language ? (
             <h3>مدل سازی ساختار داده، پشتیبانی و ارتقا کارایی</h3>
@@ -154,12 +196,12 @@ export default function Home() {
       <div className={classes.bannerServices}>
         <div
           className={
-            selectedId === "element1"
+            selectedId === "element5"
               ? `${classes.banner} animate__animated animate__swing`
               : classes.banner
           }
-          id="element1"
-          onClick={() => handleClick("element1")}
+          id="element5"
+          onClick={() => handleClick("element5")}
         >
           {!language ? (
             <h3>سایت شخصی حرفه‌ای </h3>
@@ -174,24 +216,24 @@ export default function Home() {
         </div>
         <div
           className={
-            selectedId === "element2"
+            selectedId === "element6"
               ? `${classes.banner} animate__animated animate__swing`
               : classes.banner
           }
-          id="element2"
-          onClick={() => handleClick("element2")}
+          id="element6"
+          onClick={() => handleClick("element6")}
         >
           {!language ? <h3>فروشگاه اینترنتی</h3> : <h3>Online shop</h3>}
           {!language ? <h3>سایت پزشکی</h3> : <h3>Medical site</h3>}
         </div>
         <div
           className={
-            selectedId === "element3"
+            selectedId === "element7"
               ? `${classes.banner} animate__animated animate__swing`
               : classes.banner
           }
-          id="element3"
-          onClick={() => handleClick("element3")}
+          id="element7"
+          onClick={() => handleClick("element7")}
         >
           {!language ? (
             <h3>سایت نوبت دهی برای کسب و کار</h3>
