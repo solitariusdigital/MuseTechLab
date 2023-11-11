@@ -123,9 +123,9 @@ export default function Home() {
         >
           <PrecisionManufacturingIcon sx={{ fontSize: 45, color: "#AF7AC5" }} />
           {!language ? (
-            <h3>توسعه نرم‌‌افزار، وب اپلیکیشن، وب سایت</h3>
+            <h3>توسعه نرم‌‌افزار، وب اپلیکیشن PWA، وب سایت</h3>
           ) : (
-            <h3>Software development, Web application, Website</h3>
+            <h3>Software development, Web application PWA, Website</h3>
           )}
         </div>
         <div
