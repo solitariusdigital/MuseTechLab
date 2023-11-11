@@ -241,9 +241,9 @@ export default function Home() {
             <h3>Appointment site for business</h3>
           )}
           {!language ? (
-            <h3>نرم افزار تحت وب / ​وب اپلیکیشن</h3>
+            <h3>نرم افزار تحت وب / ​PWA وب اپلیکیشن</h3>
           ) : (
-            <h3>Software / Web application</h3>
+            <h3>Software / Web application PWA</h3>
           )}
         </div>
       </div>
