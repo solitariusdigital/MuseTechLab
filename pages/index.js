@@ -145,20 +145,6 @@ export default function Home() {
           )}
         </div>
       </div>
-      <div className={classes.button}>
-        <button
-          onClick={() =>
-            window.open(
-              !language
-                ? "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link"
-                : "https://docs.google.com/forms/d/e/1FAIpQLSfpCOHJ0Y0myLiaVxvHBjypDKYeA8eE-YsrtBctyzvLJ07ZaA/viewform?usp=sf_link",
-              "_self"
-            )
-          }
-        >
-          {!language ? "درخواست مشاوره" : "Consultation"}
-        </button>
-      </div>
       <div className={classes.description}>
         {!language ? (
           <h3>
@@ -518,20 +504,6 @@ export default function Home() {
             through the creative process”
           </h3>
         )}
-      </div>
-      <div className={classes.button}>
-        <button
-          onClick={() =>
-            window.open(
-              !language
-                ? "https://docs.google.com/forms/d/e/1FAIpQLSdqKHLBydQIfm06LTtw0wELHaDJJFGU3GNQFsVWNd3t0jz5hA/viewform?usp=sf_link"
-                : "https://docs.google.com/forms/d/e/1FAIpQLSfpCOHJ0Y0myLiaVxvHBjypDKYeA8eE-YsrtBctyzvLJ07ZaA/viewform?usp=sf_link",
-              "_self"
-            )
-          }
-        >
-          {!language ? "درخواست مشاوره" : "Consultation"}
-        </button>
       </div>
       <div className={classes.canvasContainer}>
         <div className={classes.canvas}>

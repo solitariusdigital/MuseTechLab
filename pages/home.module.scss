@@ -126,6 +126,7 @@
   width: 600px;
   text-align: center;
   line-height: 40px;
+  margin: 100px 0px;
 
   @include mixins.mobile {
     width: calc(100% - 24px);
@@ -136,7 +137,6 @@
   width: 7em;
   height: 7em;
   cursor: none;
-  margin-top: 100px;
   border-radius: 50%;
   box-shadow: -10px -10px 10px #af7ac5, 0px -10px 10px 0px #e74c3c,
     10px -10px 10px #f7f9fb, 10px 0 10px #f06060, 10px 10px 10px 0px#8CBEB2,
@@ -154,7 +154,6 @@
   display: flex;
   flex-direction: column;
   width: 600px;
-  margin-bottom: 100px;
 
   @include mixins.mobile {
     width: calc(100% - 24px);
@@ -212,14 +211,6 @@
     .item {
       margin: 20px 20px;
     }
-  }
-}
-
-.button {
-  margin: 100px 0px;
-
-  button {
-    @include mixins.heartbeat();
   }
 }
 
